@@ -1,10 +1,14 @@
 {include file="header.tpl"}
 
+
 {if $false_data != 1}
 <h3>Deposit Confirmation:</h3>
 <br><br>
 
-<table cellspacing=0 cellpadding=2 class="form deposit_confirm">
+<div class="card">
+    <div class="card-body">
+        
+        <table cellspacing=0 cellpadding=2 class="form deposit_confirm">
 {if $deposit.id > 0}
 <tr>
  <th>Plan:</th>
@@ -64,6 +68,10 @@
 </tr>
 {/if}
 </table>
+
+    </div>
+</div>
+
 
 {$payment_form}
 {/if}

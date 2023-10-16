@@ -64,7 +64,9 @@ Withdraw is not available for demo account.
 <input type=hidden name=amount value={$amount}>
 <input type=hidden name=ec value={$ec}>
 <input type=hidden name=comment value="{$comment|escape:html}">
-
+<div class="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
+    <div class="card">
+<div class="card-body">
 <table cellspacing=0 cellpadding=2 border=0 class="form deposit_confirm">
 <tr>
  <th>Payment System:</th>
@@ -162,6 +164,9 @@ document.getElementById('tfa_time').value = (new Date()).getTime();
 <tr>
  <td colspan=2><input type=submit value="Confirm" class=sbmt></td>
 </tr></table>
+</div>
+</div>
+</div>
 </form>
 
 
@@ -210,57 +215,124 @@ document.getElementById('tfa_time').value = (new Date()).getTime();
 </table>
 *}
 
-<table cellspacing=0 cellpadding=2 border=0>
-<tr>
- <td>Account Balance:</td>
- <td>{$currency_sign}<b>{$ab_formated.total}</b></td>
-</tr>
-<tr>
- <td>Pending Withdrawals: </td>
- <td>{$currency_sign}<b>{if $ab_formated.withdraw_pending != 0}{$ab_formated.withdraw_pending|amount_format}{/if}</b></td>
-</tr>
-</table>
+<div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex px-0 justify-content-between">
+                    <strong>Account Balance:</strong>
+                    <span class="mb-0"><b style="color:green">{$currency_sign}<b>{$ab_formated.total}</b></span>
+                </li>
 
-<table cellspacing=0 cellpadding=2 border=0>
-<tr>
- <th></th>
- <th>Processing</th>
- <th>Available</th>
-{if $have_hold}
- <th>On Hold</th>
-{/if}
- <th>Pending</th>
- <th>Account</th>
-</tr>
-{foreach from=$ps item=p}
-<tr>
- <td>{if $p.available > 0}{if $p.status > 0 || $p.available > 0}<input type="radio" name="ec" value="{$p.id}" {if $frm.ec == $p.id}checked{/if}>{/if}{/if}</td>
- <td><img src="images/{$p.id}.gif" width=44 height=17 align=absmiddle> {$p.name|escape:html}</td>
- <td><b style="color:green">{$currency_sign}{$p.available}</b></td>
-{if $have_hold}
- <td><b style="color:gray">{$currency_sign}{$p.hold}</b></td>
-{/if}
- <td><b style="color:red">{$currency_sign}{$p.pending}</b></td>
- <td>{if $p.account != ''}{$p.account|escape:html}{else}<a href="{"?a=edit_account"|encurl}"><i>not set</i></a>{/if}</td>
-</tr>
+                <li class="list-group-item d-flex px-0 justify-content-between">
+                    <strong>Pending Withdraw:</strong>
+                    {if $ab_formated.withdraw_pending != 0}
+                    <span class="mb-0">
+                        <b style="color:red">{$currency_sign}{$ab_formated.withdraw_pending|amount_format}</b>
+                    </span>
+                    {else}
+                    <span class="mb-0">You have No Pending Withdrawal</span>
+                    {/if}
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    
+    {foreach from=$ps item=p}
+    <div class="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
+    
+            <div class="card">
+                <div class="card-header border-0 pb-0">
+                    
+                    
+                    {if $p.available > 0}
+                        {if $p.status > 0 || $p.available > 0}
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ec" value="{$p.id}"
+                                {if $frm.ec == $p.id}checked{/if}>
+                          
+                                
+                            </div>
+                        {/if}
+                    {/if}
+                    
+                    <h2 class="card-title"><img src="images/{$p.id}.gif" width=50 height=50 align=absmiddle> {$p.name|escape:html}</h2>
+                </div>
+                
+                <div class="card-body pb-0">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex px-0 justify-content-between">
+                            <strong>Available Balance:</strong>
+                            <span class="mb-0"><b style="color:green">{$currency_sign}{$p.available}</b></span>
+                        </li>
+                        
+                        {if $have_hold}
+                            <li class="list-group-item d-flex px-0 justify-content-between">
+                                <strong>On Hold Balance:</strong>
+                                <span class="mb-0"><b style="color:green">{$currency_sign}{$p.hold}</b></span>
+                            </li>
+                        {/if}
+                        
+                        <li class="list-group-item d-flex px-0 justify-content-between">
+                            <strong>Pending Withdraw:</strong>
+                            <span class="mb-0"><b style="color:red">{$currency_sign}{$p.pending}</b></span>
+                        </li>
+                        
+                        <li class="list-group-item d-flex px-0 justify-content-between">
+                            <strong>Wallet Address:</strong>
+                            <span class="mb-0">{if $p.account != ''}{$p.account|escape:html}{else}<a href="{"?a=edit_account"|encurl}" class="btn btn-primary">Add Address</a>{/if}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+   
+        
+    
+</div>
 {/foreach}
-</table>
+</div>
+
+
+
 
 {if $have_available}
-<table cellspacing=0 cellpadding=2 border=0 width=200>
-<tr>
- <td colspan=2>&nbsp;</td>
-</tr>
-<tr>
- <td>Withdrawal ({$currency_sign}):</td>
- <td><input type=text name=amount value="{$frm.amount|amount_format|default:"10.00"}" class=inpts size=15></td>
-</tr><tr>
- <td colspan=2><textarea name=comment class=inpts cols=45 rows=4>Your comment</textarea>
-</tr>
-<tr>
- <td>&nbsp;</td>
- <td><input type=submit value="Request" class=sbmt></td>
-</tr></table>
+<div class="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
+
+    <div class="card">
+
+        <div class="card-body">
+            <div class="basic-form">
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label">Withdrawal ({$currency_sign})</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            placeholder="{$frm.amount|amount_format|default:"10.00"}"
+                            name=amount
+                        >
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label">Comment</label>
+                        <textarea name=comment class="form-control" rows="4" id="comment"></textarea>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <input
+        type=submit
+        value="Request"
+        class="btn btn-primary"
+    />
+</div>
+
 {else}
 <br><br>
 You have no funds to withdraw.

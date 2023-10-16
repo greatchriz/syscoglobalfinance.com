@@ -1,66 +1,58 @@
-{if $settings.reverse_columns}
-</div>
 
-              </td>
-              </tr>
-            </table>
-            <!-- Main: END -->
+        </div>
+            </div>
+        </div>
 
-              </td>
-              <td class=line valign="top" width=1><img src=images/q.gif width=1 height=1></td>          
-              <td width=300 align=center><img src="images/q.gif" width=180 height=1>
-{include file="left.tpl"}
-              </td>
-
-             </tr>
-           </table>
-		  </td>
-		 </tr>
-	   </table>
-	 </td>
-  </tr>
+		<!--**********************************
+            Content body end
+        ***********************************-->
 
 
 
-  <tr> 
-    <td height="19" class="forCopyright">All Rights Reserved. <a href='{$settings.site_url}' class="forCopyright">{$settings.site_name}</a></td>
-  </tr>
-</table>
-</center></body>
+		<div class="footer">
+			<div class="copyright">
+				<p>Copyright © puinvestment.org 2023</p>
+			</div>
+		</div>
+
+	
+	</div>
+
+
+	<script src="https://use.fontawesome.com/99dda5ee24.js"></script>
+
+
+	<script src="static/vendor/global/global.min.js"></script>
+
+	<script src="static/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+
+
+	<script src="static/vendor/chart.js/Chart.bundle.min.js"></script>
+
+	<script src="static/vendor/owl-carousel/owl.carousel.js"></script>
+
+	<script src="static/vendor/peity/jquery.peity.min.js"></script>
+<script src="static/js/custom.js"></script>
+
+	<script src="static/js/dashboard/dashboard-1.js"></script>
+
+	<script src="static/js/dz.carousel.js"></script>
+
+
+	
+
+	<script src="static/js/deznav-init.js"></script>
+
+	<script src="static/js/demo.js"></script>
+
+
+
+
+
+
+</body>
+
+<!-- Mirrored from chrev.makaanlelo.com/index/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Jul 2022 07:33:03 GMT -->
+
 </html>
-{else}
-</div>
-
-              </td>
-              </tr>
-            </table>
-            <!-- Main: END -->
-
-              </td>
-
-{if $settings.show_news_box}
-              <td class=line valign="top" width=1><img src=images/q.gif width=1 height=1></td>          
-              <td width=300 align=center class=bgcolorright><img src="images/q.gif" width=180 height=1>
-{if $settings.show_news_box}
-{include file="news_box.tpl"}
-{/if}
-                                   
-              </td>
-{/if}
-             </tr>
-           </table>
-		  </td>
-		 </tr>
-	   </table>
-	 </td>
-  </tr>
-
-
-
-  <tr> 
-    <td height="19" class="forCopyright">All Rights Reserved. <a href='{$settings.site_url}' class="forCopyright">{$settings.site_name}</a></td>
-  </tr>
-</table>
-</center></body>
-</html>
-{/if}

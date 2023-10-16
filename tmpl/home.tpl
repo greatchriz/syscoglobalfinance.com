@@ -1,50 +1,47 @@
-{include file="header.tpl"}
+{extends file="page_layout.tpl"}
 
-Our program is intended for people willing to achieve their financial freedom but unable to do so because they're not financial experts.<br>
-
-{$settings.site_name} is a long term high yield private loan program, backed up by Forex market trading and investing in various funds and activities. 
-Profits from these investments are used to enhance our program and increase its stability for the long term.<br><br>
-
-<br><br>
+{block name=hero}
+    {include file="sections/home/hero/layout.tpl"}
+{/block}
 
 
-{include file="index.plans.tpl"}
+{block name=section1}
 
-<br><br>
-All payments are made to your account Daily. <br>
-Minimum spend is {$currency_sign}10 and there is no maximum. <br>
-You may make an additional spend as many times as you like. <br>
-{*All transactions are handled via e-gold. If you don't have an e-gold account, you need to get one.<br>*}
-<br><br>
+{include file="sections/home/features/layout.tpl"}
 
-{if $settings.use_referal_program == 1 && $ref_plans}
-Use our referral program and earn up to {$percent}% of referral deposits!<br><br>
-<b>Our first level referral bonuses:</b>
-<table cellspacing=0 cellpadding=2 border=0 width=100%>
-<tr>
- <td class=inheader>Name</td>
- <td class=inheader>From</td>
- <td class=inheader>To</td>
- <td class=inheader>Commision (%)</td>
-</tr>
-{section name=r loop=$ref_plans}
-<tr>
- <td class=item>{$ref_plans[r].name}</td>
- <td class=item align=center>{$ref_plans[r].from_value}</td>
- <td class=item align=center>{if $ref_plans[r].to_value == 0}and more{else}{$ref_plans[r].to_value}{/if}</td>
- <td class=item align=right>{$ref_plans[r].percent}</td>
-</tr>
-{/section}
-</table>
-<br><br>
-{if $ref_levels}
-Our other levels referral bonuses (not depending on the number of referrals):<br>
-{section name=rl loop=$ref_levels}
-Level {$ref_levels[rl].level}: <b>{$ref_levels[rl].percent}%</b><br> 
-{/section}
-{/if}
-{/if}
+{/block}
 
+{block name=section2}
+ {include file="sections/home/key-features.tpl"}
+{/block}
 
+{block name=section3}
+ {include file="sections/home/plans/layout.tpl"}
+{/block}
 
-{include file="footer.tpl"}
+{block name=section4}
+
+<section
+    class="py-20 w-full table relative bg-[url('../../assets/images/gym/cta.html')] bg-center bg-no-repeat bg-fixed bg-cover"
+>
+    <div class="absolute inset-0 bg-black opacity-80"></div>
+    <div class="container relative">
+        <div class="grid grid-cols-1 text-center">
+            <h3 class="mb-4 md:text-3xl text-2xl text-white font-medium">Company Registration Certificate</h3>
+
+            <p class="text-white/80 max-w-xl mx-auto">Proof of Our Legitimacy and Compliance.</p>
+
+            <div class="mt-6">
+                <a
+                    href="https://www.northdata.com/PU+Investment+GmbH,+Glash%C3%BCtten/Amtsgericht+K%C3%B6nigstein+HRB+10633"
+                    class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md"
+                >View Certificate</a>
+            </div>
+        </div>
+        <!--end grid-->
+    </div>
+    <!--end container-->
+</section>
+
+    
+{/block}
