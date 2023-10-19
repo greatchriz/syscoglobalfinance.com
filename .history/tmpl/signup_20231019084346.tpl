@@ -422,7 +422,7 @@
             >
         </div>
 
-        {* <tr>
+        <tr>
           <td>Secret question:</td>
           <td><input
               type=text
@@ -441,21 +441,25 @@
               class=inpts
               size=30
             ></td>
-        </tr> *}
+        </tr>
 
-        <div class="form-group">
-            <input
+        <tr>
+          <td colspan=2><input
               type=checkbox
               name=agree
               value=1
               {if $frm.agree}checked{/if}
             > I agree with <a href="{"?a=rules"|encurl}">Terms and conditions</a></td>
-        </div>
+        </tr>
 
-        <div class="form-group text-center">
-          <button type="submit" class="mt-2 mb-2">Register</button>
-      </div>
-
+        <tr>
+          <td>&nbsp;</td>
+          <td><input
+              type=submit
+              value="Register"
+              class=sbmt
+            ></td>
+        </tr>
       </form>
     </div>
   </div>

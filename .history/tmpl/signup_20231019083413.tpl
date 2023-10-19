@@ -312,42 +312,37 @@
             </td>
           </tr>
         {/if}
-
-        <div class="form-group">
-          <label for="sign-up">Your Username </label>
-          <input
-            type="text"
-            placeholder="Enter Your Username "
-            id="sign-up"
-            name=username
+        <tr>
+          <td>Your Username:</td>
+          <td><input
+              type=text
+              name=username
               value='{$frm.username|escape:"quotes"}'
-          >
-        </div>
-
-        <div class="form-group">
-          <label for="sign-up">Your Password </label>
-          <input
-            type="password"
-            placeholder="Enter Your Password "
-            id="sign-up"
-            name=password
-            value='{$frm.password|escape:"quotes"}'
-            >
-        </div>
-
-        <div class="form-group">
-          <label for="sign-up">Retype Password </label>
-          <input
-            type="password"
-            placeholder="Retype Your Password "
-            id="sign-up"
-            name=password2
-            value='{$frm.password2|escape:"quotes"}'
-            >
-        </div>
-        
-      
-        {* {if $settings.use_transaction_code}
+              class=inpts
+              size=30
+            ></td>
+        </tr>
+        <tr>
+          <td>Define Password:</td>
+          <td><input
+              type=password
+              name=password
+              value='{$frm.password|escape:"quotes"}'
+              class=inpts
+              size=30
+            ></td>
+        </tr>
+        <tr>
+          <td>Retype Password:</td>
+          <td><input
+              type=password
+              name=password2
+              value='{$frm.password2|escape:"quotes"}'
+              class=inpts
+              size=30
+            ></td>
+        </tr>
+        {if $settings.use_transaction_code}
           <tr>
             <td>Define Transaction Code:</td>
             <td><input
@@ -398,31 +393,28 @@
                 ></td>
             </tr>
           {/foreach}
-        {/foreach} *}
-
-        <div class="form-group">
-          <label for="sign-up">Your E-mail Address </label>
-          <input
-            type="text"
-            placeholder="Enter Your E-mail Address "
-            id="sign-up"
-            name=email
+        {/foreach}
+        <tr>
+          <td>Your E-mail Address:</td>
+          <td><input
+              type=text
+              name=email
               value='{$frm.email|escape:"quotes"}'
-            >
-        </div>
-
-        <div class="form-group">
-          <label for="sign-up">Retype E-mail Address </label>
-          <input
-            type="text"
-            placeholder="Retype Your E-mail Address "
-            id="sign-up"
-            name=email1
-            value='{$frm.email1|escape:"quotes"}'
-            >
-        </div>
-
-        {* <tr>
+              class=inpts
+              size=30
+            ></td>
+        </tr>
+        <tr>
+          <td>Retype Your E-mail:</td>
+          <td><input
+              type=text
+              name=email1
+              value='{$frm.email1|escape:"quotes"}'
+              class=inpts
+              size=30
+            ></td>
+        </tr>
+        <tr>
           <td>Secret question:</td>
           <td><input
               type=text
@@ -441,21 +433,58 @@
               class=inpts
               size=30
             ></td>
-        </tr> *}
+        </tr>
 
-        <div class="form-group">
-            <input
+        {if $settings.use_referal_program}
+          {if $referer}
+            <tr>
+              <td>Your Upline:</td>
+              <td>{*<a href="mailto:{$referer.email}">*}{$referer.name}{*</a>*} ({$referer.username|escape:html})</td>
+            </tr>
+          {else}
+            {if $settings.force_upline}
+              {if $settings.get_rand_ref}
+                <tr>
+                  <td colspan=2>
+                    You do not have an upline. Our system requires an upline for each user. You'll have to agree to get a random
+                    one
+                    or find a referral link on the net.
+                    <input
+                      type=checkbox
+                      name="rand_ref"
+                      value=1
+                    >
+                  </td>
+                </tr>
+              {else}
+                <tr>
+                  <td colspan=2>
+                    You do not have an upline. Our system requires an upline for each user.
+                  </td>
+                </tr>
+              {/if}
+            {/if}
+          {/if}
+        {/if}
+
+        {include file="captcha.tpl" action="signup"}
+        <tr>
+          <td colspan=2><input
               type=checkbox
               name=agree
               value=1
               {if $frm.agree}checked{/if}
             > I agree with <a href="{"?a=rules"|encurl}">Terms and conditions</a></td>
-        </div>
+        </tr>
 
-        <div class="form-group text-center">
-          <button type="submit" class="mt-2 mb-2">Register</button>
-      </div>
-
+        <tr>
+          <td>&nbsp;</td>
+          <td><input
+              type=submit
+              value="Register"
+              class=sbmt
+            ></td>
+        </tr>
       </form>
     </div>
   </div>
