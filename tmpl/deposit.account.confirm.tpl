@@ -3,10 +3,7 @@
 {if $ok == 1}
 <h3>Deposit Confirmation:</h3><br><br>
 
-<div class="card">
-    <div class="card-body">
-        
-        <table cellspacing=0 cellpadding=2 class="form deposit_confirm">
+<table cellspacing=0 cellpadding=2 class="form deposit_confirm">
 <tr>
  <th>Plan:</th>
  <td>{$deposit.name|escape:html}</td>
@@ -41,9 +38,6 @@
  <td>{$currency_sign}{$deposit.amount}</td>
 </tr>
 </table>
-
-    </div>
-</div>
 
 <form name=spend method=post>
 

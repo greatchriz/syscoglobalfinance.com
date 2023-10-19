@@ -3,22 +3,9 @@
 {if $ok == 1}
 <h3>Please confirm your deposit:</h3><br><br>
 
-<p style="color: red;">{$description}</p>
+{$description}<br><br>
 
-<br><br>
-
-<div class="card">
-    <div class="card-body">
-<form name=spend method=post>
-<input type=hidden name=a value=deposit>
-<input type=hidden name=action value=confirm>
-<input type=hidden name=type value={$type}>
-<input type=hidden name=h_id value={$h_id}>
-<input type=hidden name=compound value={$compound}>
-<input type=hidden name=amount value="{$famount}">
-
-        
-        <table cellspacing=0 cellpadding=2 class="form deposit_confirm">
+<table cellspacing=0 cellpadding=2 class="form deposit_confirm">
 {if $deposit.id > 0}
 <tr>
  <th>Plan:</th>
@@ -65,20 +52,27 @@
  <th>Debit Amount:</th>
  <td>{$currency_sign}{$deposit.converted_amount}</td>
 </tr>
+<tr>
+ <th>{$deposit.converted_fiat} Debit Amount:</th>
+ <td>{$deposit.amount}</td>
+</tr>
 {else}
-<tr
+<tr>
  <th>Debit Amount:</th>
  <td>{$currency_sign}{$deposit.amount}</td>
 </tr>
 {/if}
 </table>
-
-
+<br><br>
+<form name=spend method=post>
+<input type=hidden name=a value=deposit>
+<input type=hidden name=action value=confirm>
+<input type=hidden name=type value={$type}>
+<input type=hidden name=h_id value={$h_id}>
+<input type=hidden name=compound value={$compound}>
+<INPUT type=hidden name=amount value="{$famount}">
 {if $fields}
-
-
-        
-        <table cellspacing=0 cellpadding=2 border=0>
+<table cellspacing=0 cellpadding=2 border=0>
 <tr>
  <td colspan=2><b>Required Information:</b></td>
 </tr>
@@ -89,15 +83,12 @@
 </tr>
 {/section}
 </table>
-
-    
 {/if}
 
-<input type=submit value="Save" class="btn btn-primary">
-<input type=button class="btn btn-primary" value="Cancel" onclick="document.location='?a=deposit'">
+<br><input type=submit value="Save" class=sbmt> &nbsp;
+<input type=button class=sbmt value="Cancel" onclick="document.location='?a=deposit'">
 </form>
-</div>
-</div>
+
 {else}
 
 {if $max_deposit_less == 1}

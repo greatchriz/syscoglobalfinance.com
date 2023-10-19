@@ -13,16 +13,7 @@ function go(p)
 <form method=post name=opts>
 <input type=hidden name=a value=deposit_history>
 <input type=hidden name=page value={$current_page}>
-<div class="card">
-    <div class="card-body">
-        
-        
-    </div>
-</div>
-
-<div class="card">
-    <div class="card-body">
-        <table cellspacing=0 cellpadding=0 border=0 width=100%>
+<table cellspacing=0 cellpadding=0 border=0 width=100%>
 <tr>
  <td>
 	<h3>Deposit history:</h3>
@@ -67,19 +58,10 @@ To: <select name=month_to class=inpts>
 	&nbsp; <input type=submit value="Go" class=sbmt>
  </td>
 </tr></table>
-
-        
-    </div>
-</div>
-
 </form>
 <br><br>
 
 {if $settings.use_history_balance_mode}
-<div class="card">
-    <div class="card-body">
-        
-        
 <table cellspacing=1 cellpadding=2 border=0 width=100%>
 <tr>
  <td class=inheader>Date</td>
@@ -138,15 +120,7 @@ To: <select name=month_to class=inpts>
  <td align=right nowrap><b>{$currency_sign}{$allbalance}</b></td>
 </tr>
 </table>
-
-    </div>
-</div>
 {else}
-
-<div class="card">
-    <div class="card-body">
-        
-    
 <table cellspacing=1 cellpadding=2 border=0 width=100%>
 <tr>
  <td class=inheader>Type</td>
@@ -182,9 +156,6 @@ To: <select name=month_to class=inpts>
  <td align=right><b>{$currency_sign} {$allsum}</b></td>
 </tr>
 </table>
-    
-    </div>
-</div>
 {/if}
 
 {if $colpages > 1}
