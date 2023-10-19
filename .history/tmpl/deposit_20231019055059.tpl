@@ -1,10 +1,5 @@
 {include file="header.tpl"}
 
-<div class="row justify-content-center mt--85">
-
-  <div class="col-12">
-
-
 {if $fatal}
 
 {if $fatal == 'one_per_month'}
@@ -202,6 +197,4 @@ updateCompound();
 {/literal}
 
 {/if}
-  </div>
-</div>
 {include file="footer.tpl"}
