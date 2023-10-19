@@ -41,7 +41,7 @@
 
     {if $settings.use_referal_program == 1}
         <li>
-            <a href="{"?a=referals"|encurl}"><i class="flaticon-deal"></i>Your Referrals</a>
+            <a href="partners.html"><i class="flaticon-deal"></i>Your Referrals</a>
 
         </li>
 
