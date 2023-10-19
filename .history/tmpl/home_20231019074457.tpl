@@ -73,6 +73,12 @@
 
 {include file="index.plans.tpl"}
 
+<br><br>
+All payments are made to your account Daily. <br>
+Minimum spend is {$currency_sign}10 and there is no maximum. <br>
+You may make an additional spend as many times as you like. <br>
+{*All transactions are handled via e-gold. If you don't have an e-gold account, you need to get one.<br>*}
+<br><br>
 
 {if $settings.use_referal_program == 1 && $ref_plans}
     Use our referral program and earn up to {$percent}% of referral deposits!<br><br>
