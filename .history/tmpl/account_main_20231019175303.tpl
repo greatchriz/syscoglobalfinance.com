@@ -2,7 +2,7 @@
 
 
 {* main container *}
-    <div class="row justify-content-center mt--85">
+    <div class="justify-content-center mt--85">
         <div class="col-sm-6 col-lg-3">
             <div class="dashboard-item">
                 <div class="dashboard-inner">
@@ -56,7 +56,7 @@
             </div>
         </div>
     </div>
-    <div class="row pb-30">
+    <div class="pb-30">
         <div class="col-lg-6">
             <div class="total-earning-item">
                 <div class="total-earning-heading">

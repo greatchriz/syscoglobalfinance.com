@@ -1,4 +1,4 @@
-
+</div>
 </div>
 <div class="container-fluid sticky-bottom">
     <div class="dashboard-footer">
