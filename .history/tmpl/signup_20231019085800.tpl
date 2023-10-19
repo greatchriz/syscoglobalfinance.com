@@ -444,20 +444,16 @@
               size=30
             ></td>
         </tr> *}
-        <div class="check_box_group">
-          <input
-            type="checkbox"
-            class="fz-sm"
-            id="time_zone"
-            name=agree
-            value=1
-            {if $frm.agree}checked{/if}
-          >
-          <label for="time_zone"> I agree with <a href="{"?a=rules"|encurl}">Terms and conditions</a></label>
+
+        <div class="form-check">
+            <input
+              type=checkbox
+              name=agree
+              value=1
+              {if $frm.agree}checked{/if}
+            > I agree with <a href="{"?a=rules"|encurl}">Terms and conditions</a></td>
         </div>
 
-
-      
         <div class="form-group text-center">
           <button type="submit" class="mt-2 mb-2">Register</button>
       </div>
