@@ -55,19 +55,68 @@
 
       {foreach from=$index_plans item=p}
         {if !$p.closed}
-         
+          <table
+            cellspacing=1
+            cellpadding=2
+            border=0
+            width=100%
+          >
+            <tr>
+              <td
+                colspan=3
+                align=center
+              >{if $p.dsc != ''}<a href="{"?a=show_package_info&id=`$p.id`"|encurl}">{/if}<b>{$p.name|escape:html}</b></a>
+              </td>
+            </tr>
+            {if $p.plans}
+              <tr>
+                <td class=inheader>Plan</td>
+                <td
+                  class=inheader
+                  width=200
+                >Spent Amount ({$currency_sign})</td>
+                <td
+                  class=inheader
+                  width=100
+                  nowrap
+                >
+                  <nobr>{$p.period} Profit (%)</nobr>
+                </td>
+              </tr>
+              {foreach from=$p.plans item=o}
+                <tr>
+                  <td class=item>{$o.name|escape:html}</td>
+                  <td
+                    class=item
+                    align=right
+                  >{$o.deposit}</td>
+                  <td
+                    class=item
+                    align=right
+                  >{$o.percent|string_format:"%.2f"}</td>
+                </tr>
+              {/foreach}
+              {if $settings.enable_calculator and $p.period != 'Floating'}
+                <tr>
+                  <td
+                    colspan=3
+                    align=right
+                  ><a href="javascript:openCalculator('{$p.id}')">Calculate your profit &gt;&gt;</a></td>
+                </tr>
+              {/if}
+            {/if}
+          </table>
 
           <div class="section-header">
             <span class="cate"> {if $p.dsc != ''}<a href="{"?a=show_package_info&id=`$p.id`"|encurl}">{/if}<b>{$p.name|escape:html}</b></a></span>
           </div>
 
          
-          {if $p.plans}
 
           <div class="offer-item">
             <div class="offer-header">
-              <h3 class="title">{$o.percent|string_format:"%.2f"}</h3>
-              <span><b>R.O.I</b></span>
+              <h3 class="title">120%</h3>
+              <span><b>every day</b></span>
             </div>
             <div class="offer-body">
               <span class="bal-shape"></span>
@@ -80,7 +129,7 @@
                 </div>
                 <div class="item-content">
                   <h5 class="title">Deposit</h5>
-                  <h5 class="subtitle"><span class="min">{$o.deposit}</span>
+                  <h5 class="subtitle"><span class="min">$10</span><span class="to">to</span><span class="max">$3500</span>
                   </h5>
                 </div>
               </div>
@@ -94,7 +143,7 @@
                 </div>
                 <div class="item-content">
                   <h5 class="title">Terms</h5>
-                  <h5 class="subtitle">{$o.name|escape:html}</h5>
+                  <h5 class="subtitle">10 days</h5>
                 </div>
               </div>
             </div>
@@ -105,7 +154,6 @@
               >invest now</a>
             </div>
           </div>
-          {/if}
 
           {if $userinfo.logged}
             <br>
