@@ -39,19 +39,15 @@
       </div>
     </div>
     <div class="offer-wrapper">
+   
 
+          <div class="section-header">
+            <span class="cate" style="font-weight: bold;">{if $p.dsc != ''}<a href="{"?a=show_package_info&id=`$p.id`"|encurl}">{/if}<b>{$p.name|escape:html}</b></a></span>
+          </div>
 
-      <div class="section-header">
-        <span
-          class="cate"
-          style="font-weight: bold;"
-        >{if $p.dsc != ''}<a
-            href="{"?a=show_package_info&id=`$p.id`"|encurl}">{/if}<b>{$p.name|escape:html}</b></a></span>
-      </div>
+          {if $p.plans}
 
-      {if $p.plans}
-
-        {foreach from=$p.plans item=o}
+            {foreach from=$p.plans item=o}
 
           <div class="offer-item">
             <div class="offer-header">
@@ -69,8 +65,7 @@
                 </div>
                 <div class="item-content">
                   <h5 class="title">Deposit</h5>
-                  <h5 class="subtitle"><span class="min">${$p.min_deposit}</span><span class="to">to</span><span
-                      class="max">${$p.max_deposit}</span></h5>
+                  <h5 class="subtitle"><span class="min">${$p.min_deposit}</span><span class="to">to</span><span class="max">${$p.max_deposit}</span></h5>
                   <h5 class="subtitle">{$o.deposit}</span>
                   </h5>
                 </div>
@@ -89,42 +84,43 @@
                 </div>
               </div>
             </div>
-            {if $userinfo.logged}
-              <form method=post>
-                <input
-                  type=hidden
-                  name=a
-                  value=deposit
-                >
-                <div class="offer-footer">
-                  <button
-                    type="submit"
-                    class="custom-button"
-                  >Make deposit
-                  </button>
-                </div>
-                <input
-                  type=hidden
-                  name=h_id
-                  value={$p.id}
-                >
-              </form>
-            {else}
-              <div class="offer-footer">
-                <a
-                  href="{"?a=login"|encurl}"
-                  class="custom-button"
-                >Invest now</a>
-              </div>
+            <div class="offer-footer">
+              <a
+                href="#0"
+                class="custom-button"
+              >invest now</a>
+            </div>
+          </div>
 
-            {/if}
-
-
-          {/foreach}
+        {/foreach}
 
         {/if}
 
-      </div>
+
+          {if $userinfo.logged}
+            <br>
+            <form method=post>
+              <input
+                type=hidden
+                name=a
+                value=deposit
+              >
+              <input
+                type=submit
+                value="Make deposit"
+                class=sbmt
+              >
+              <input
+                type=hidden
+                name=h_id
+                value={$p.id}
+              >
+            </form>
+            <br><br>
+          {/if}
+        {/if}
+      {/foreach}
     </div>
+  </div>
 </section>
 <!--=======Offer-Section Ends Here=======-->
