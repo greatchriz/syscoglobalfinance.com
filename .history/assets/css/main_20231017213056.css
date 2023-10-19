@@ -5400,7 +5400,7 @@ body *::-webkit-scrollbar-track {
     color: #ffffff;
 }
 
-/* .dashboard-menu li a::after {
+.dashboard-menu li a::after {
     position: absolute;
     content: "\f105";
     right: 0;
@@ -5413,7 +5413,7 @@ body *::-webkit-scrollbar-track {
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
     transition: all ease 0.3s;
-} */
+}
 
 .dashboard-menu li a i {
     font-size: 30px;
