@@ -82,7 +82,7 @@
                 </div>
                 <div class="item-content">
                   <h5 class="title">Deposit</h5>
-                  <h5 class="subtitle">{$p.min_deposit}
+                  <h5 class="subtitle">{$o.deposit}
                   </h5>
                 </div>
               </div>
