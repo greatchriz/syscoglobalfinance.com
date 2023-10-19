@@ -1,103 +1,490 @@
 {include file="header.tpl"}
 
-{loaddata name="user_notices" var=notices}
 
-{if $notices}
-<ul style="color:red">
-{foreach from=$notices item=n}
-<li><b>{$n.title}</b> {$n.text|nl2br}
-<form method=post>
-<input type=hidden name=a value=user_notices>
-<input type=hidden name=action value=notified>
-<input type=hidden name=id value={$n.id}>
-<input type=submit value="Dismiss">
-</form>
-{/foreach}
-</ul>
-{/if}
-
-<h3>Your account:</h3><br>
-
-{if $settings.use_transaction_code ==1 && $userinfo.transaction_code == ''} <b>Note: currently you have not specified 
-a Transaction code. The Transaction code strengthens your funds security in our 
-system. The code is required to withdraw funds from your account{if $settings.internal_transfer_enabled} 
-and for internal transfer to another user account{/if}. Just do not change 'Transaction 
-code' in your account information if you do not want to use this feature. <a href=?a=edit_account>Click 
-here</a> to specify a new transaction code .</b> <br>
-<br>
-{/if}
-
-{if $userinfo.tfa_not_enabled} 
-<b>Security Note: please, activate <a href="{"?a=security"|encurl}">Two Factor Authentication</a> to keep your account safe.</b>
-{/if}
-
-<table cellspacing=0 cellpadding=2 border=0>
-<tr>
- <td>User:</td>
- <td>{$userinfo.username}</td>
-</tr><tr>
- <td>Registration Date:</td>
- <td>{$userinfo.create_account_date}</td>
-</tr><tr>
- <td>Last Access:</td>
- <td>{$last_access|default:"n/a"}&nbsp;</td>
-</tr><tr>
- <td>&nbsp;</td>
-</tr><tr>
- <td valign=top>Account Balance:</td>
- <td>{$currency_sign}<b>{$ab_formated.total}</b><br>
- <small>
-{foreach from=$ps item=p}
-   {if $p.balance > 0}{$currency_sign}{$p.balance} of {$p.name}<br>{/if}
-{/foreach}
-</tr><tr>
- <td>Earned Total:</td>
- <td>{$currency_sign}<b>{$ab_formated.earning}</b></td>
-</tr><tr>
- <td>Pending Withdrawal:</td>
- <td>{$currency_sign}<b>{$ab_formated.withdraw_pending}</b></td>
-</tr><tr>
- <td>Withdrew Total:</td>
- <td>{$currency_sign}<b>{$ab_formated.withdrawal}</b></td>
-</tr><tr>
- <td>Active Deposit:</td>
- <td>{$currency_sign}<b>{$ab_formated.active_deposit}</b></td>
-</tr><tr>
- <td>&nbsp;</td>
-</tr>
-{if $last_deposit}
-<tr>
- <td>Last Deposit:</td>
- <td>{$currency_sign}<b>{$last_deposit|default:"n/a"}</b> &nbsp; <small>{$last_deposit_date|default:"n/a"}</small></td>
-</tr>
-{/if}
-{if $ab_formated.deposit != 0}
-<tr>
- <td>Total Deposit:</td>
- <td>{$currency_sign}<b>{$ab_formated.deposit}</b></td>
-</tr>
-{/if}
-{if $last_withdrawal}
-<tr>
- <td>Last Withdrawal:</td>
- <td>{$currency_sign}<b>{$last_withdrawal|default:"n/a"}</b> &nbsp; <small>{$last_withdrawal_date|default:"n/a"}</small></td>
-</tr>
-{/if}
-{if $ab_formated.withdrawal > 0}
-<tr>
-    <td>Withdrew Total:</td>
- <td>{$currency_sign}<b>{$ab_formated.withdrawal}</b></td>
-</tr>
-{/if}
-<tr>
- <td>&nbsp;</td>
-</tr></table>
-
-{section name=p loop=$ps}
-  {if $ps[p].pending_col > 0}{$ps[p].pending_col} {$ps[p].name} deposit{if $ps[p].pending_col > 1}s{/if} of {$currency_sign}{$ps[p].pending_amount} total pending<br>{/if}
-{/section}
-
-<br><br>
-
-
+{* main container *}
+<div class="container-fluid">
+    <div class="row justify-content-center mt--85">
+        <div class="col-sm-6 col-lg-3">
+            <div class="dashboard-item">
+                <div class="dashboard-inner">
+                    <div class="cont">
+                        <span class="title">Balance</span>
+                        <h5 class="amount">0 USD</h5>
+                    </div>
+                    <div class="thumb">
+                        <img
+                            src="./assets/images/dashboard/dashboard1.png"
+                            alt="dasboard"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="dashboard-item">
+                <div class="dashboard-inner">
+                    <div class="cont">
+                        <span class="title">Balance</span>
+                        <h5 class="amount">0 BTC</h5>
+                    </div>
+                    <div class="thumb">
+                        <img
+                            src="./assets/images/dashboard/dashboard2.png"
+                            alt="dasboard"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="dashboard-item">
+                <div class="dashboard-inner">
+                    <div class="cont">
+                        <span class="title">Balance</span>
+                        <h5 class="amount">0 ETH</h5>
+                    </div>
+                    <div class="thumb">
+                        <img
+                            src="./assets/images/dashboard/dashboard3.png"
+                            alt="dasboard"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="dashboard-item">
+                <div class="dashboard-inner">
+                    <div class="cont">
+                        <span class="title">Balance</span>
+                        <h5 class="amount">0 XRP</h5>
+                    </div>
+                    <div class="thumb">
+                        <img
+                            src="./assets/images/dashboard/dashboard4.png"
+                            alt="dasboard"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row pb-30">
+        <div class="col-lg-6">
+            <div class="total-earning-item">
+                <div class="total-earning-heading">
+                    <h5 class="title">Total earning </h5>
+                    <h4 class="amount cl-1">$103 458</h4>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between">
+                    <div class="item">
+                        <div class="cont">
+                            <h4 class="cl-theme">+.3%</h4>
+                            <span class="month">August Profit</span>
+                        </div>
+                        <div class="thumb">
+                            <img
+                                src="./assets/images/dashboard/graph1.png"
+                                alt="dashboard"
+                            >
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="cont">
+                            <h4 class="cl-1">+.12%</h4>
+                            <span class="month">Year Profit</span>
+                        </div>
+                        <div class="thumb">
+                            <img
+                                src="./assets/images/dashboard/graph2.png"
+                                alt="dashboard"
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a
+                        href="#0"
+                        class="normal-button"
+                    >Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="progress-wrapper mb-30">
+                <h5 class="title cl-white">Progress</h5>
+                <div class="d-flex flex-wrap m-0-15-20-none">
+                    <div class="circle-item">
+                        <span class="level">Level(1)</span>
+                        <div class="progress1 circle">
+                            <strong></strong>
+                        </div>
+                    </div>
+                    <div class="circle-item">
+                        <span class="level">ROI Speed</span>
+                        <div class="progress2 circle">
+                            <strong></strong>
+                        </div>
+                    </div>
+                    <div class="circle-item">
+                        <span class="level">ROI Redeemed</span>
+                        <div class="progress3 circle">
+                            <strong></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="earn-item mb-30">
+                <div class="earn-thumb">
+                    <img
+                        src="./assets/images/dashboard/earn/01.png"
+                        alt="dashboard-earn"
+                    >
+                </div>
+                <div class="earn-content">
+                    <h6 class="title">Active deposits in the amount of</h6>
+                    <ul class="mb--5">
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/usd.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.00</span>
+                                <span class="cl-4">USD</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/btc.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">BTC</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/xrp.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">XRP</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/eth.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">ETH</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="earn-item mb-30">
+                <div class="earn-thumb">
+                    <img
+                        src="./assets/images/dashboard/earn/02.png"
+                        alt="dashboard-earn"
+                    >
+                </div>
+                <div class="earn-content partner-content d-flex flex-wrap align-items-start justify-content-between">
+                    <h6 class="title w-100">All partners</h6>
+                    <ul class="mb--5">
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/active.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-4">Active :</span>
+                                <span class="cl-1">40</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/inactive.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-4">Inactive :</span>
+                                <span class="cl-1">05</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="total-partner">
+                        <span class="total-title">45</span>
+                        <span>Total</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xl-4">
+            <div class="earn-item mb-30">
+                <div class="earn-thumb">
+                    <img
+                        src="./assets/images/dashboard/earn/03.png"
+                        alt="dashboard-earn"
+                    >
+                </div>
+                <div class="earn-content">
+                    <h6 class="title">Earned Referral</h6>
+                    <ul class="mb--5">
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/usd.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.00</span>
+                                <span class="cl-4">USD</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/btc.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">BTC</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/xrp.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">XRP</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/eth.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">ETH</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xl-4">
+            <div class="earn-item mb-30">
+                <div class="earn-thumb">
+                    <img
+                        src="./assets/images/dashboard/earn/04.png"
+                        alt="dashboard-earn"
+                    >
+                </div>
+                <div class="earn-content">
+                    <h6 class="title">Earned Deposits</h6>
+                    <ul class="mb--5">
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/usd.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.00</span>
+                                <span class="cl-4">USD</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/btc.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">BTC</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/xrp.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">XRP</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/eth.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">ETH</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xl-4">
+            <div class="earn-item mb-30">
+                <div class="earn-thumb">
+                    <img
+                        src="./assets/images/dashboard/earn/05.png"
+                        alt="dashboard-earn"
+                    >
+                </div>
+                <div class="earn-content">
+                    <h6 class="title">Payout</h6>
+                    <ul class="mb--5">
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/usd.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.00</span>
+                                <span class="cl-4">USD</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/btc.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">BTC</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/xrp.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">XRP</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/eth.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.000000</span>
+                                <span class="cl-4">ETH</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="earn-item small-thumbs mb-30">
+                <div class="earn-thumb">
+                    <img
+                        src="./assets/images/dashboard/earn/06.png"
+                        alt="dashboard-earn"
+                    >
+                </div>
+                <div class="earn-content">
+                    <h6 class="title">Latest Registered Partner</h6>
+                    <ul class="mb--5">
+                        <li>
+                            <div class="cont w-100 p-0">
+                                <span class="cl-1">Adrian54</span>
+                                <a
+                                    href="Mailto:demo@mail.com"
+                                    class="cl-4"
+                                >Email: <span
+                                        class="__cf_email__"
+                                        data-cfemail="c0a4a5adaf80ada1a9aceea3afad"
+                                    >[email&#160;protected]</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="earn-item small-thumbs mb-30">
+                <div class="earn-thumb">
+                    <img
+                        src="./assets/images/dashboard/earn/07.png"
+                        alt="dashboard-earn"
+                    >
+                </div>
+                <div class="earn-content">
+                    <h6 class="title">The last Referral Calculation</h6>
+                    <ul class="mb--5">
+                        <li>
+                            <div class="icon">
+                                <img
+                                    src="./assets/images/dashboard/earn/usd.png"
+                                    alt="dashboard-earn"
+                                >
+                            </div>
+                            <div class="cont">
+                                <span class="cl-1">0.00</span>
+                                <span class="cl-4">USD</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{* main container end *}
 {include file="footer.tpl"}
