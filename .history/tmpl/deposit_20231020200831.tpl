@@ -139,7 +139,7 @@
         {/section}
 
       </div>
-{* 
+
       <tr>
         <td colspan=2>
           <table
@@ -174,66 +174,14 @@
             {/section}
           </table>
         </td>
-      </tr> *}
+      </tr>
 
       <div class="deposit-system">
         <h4 class="main-subtitle">02. Choose Payment System</h4>
         <div class="text-center deposit-method-slider owl-theme owl-carousel">
 
-          {section name=p loop=$ps}
-            {if $ps[p].balance > 0 and $ps[p].status == 1}
-              <a
-                href="#"
-                class="deposit-method-item"
-              >
-                <input
-                  type="checkbox"
-                  id="checkbox-{$ps[p].id}"
-                  name=type
-                  value="account_{$ps[p].id}"
-                  hidden
-                >
-                <label for="checkbox-{$ps[p].id}">{$ps[p].name}</label>
-                <div class="thumb">
-                  <div class="check">
-                    <img
-                      src="./assets/images/dashboard/payment/check.png"
-                      alt="payment"
-                    >
-                  </div>
-                  <img
-                    src="./assets/images/dashboard/payment/01.png"
-                    alt="payment"
-                  >
-                </div>
-              </a>
-            {/if}
-          {/section}
         </div>
-
       </div>
-
-      {literal}
-
-        <script>
-          const checkboxes = document.querySelectorAll('.deposit-method-item');
-
-          checkboxes.forEach(depositMethodItem => {
-            depositMethodItem.addEventListener('click', () => {
-              const checkbox = depositMethodItem.querySelector('input[type="checkbox"]');
-              checkbox.checked = !checkbox.checked;
-
-              if (checkbox.checked) {
-                depositMethodItem.classList.add('active');
-              } else {
-                depositMethodItem.classList.remove('active');
-              }
-            });
-          });
-        </script>
-
-      {/literal}
-
 
     
 
