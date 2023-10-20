@@ -179,6 +179,7 @@
 
       <div class="deposit-system">
         <h4 class="main-subtitle">02. Choose Payment System</h4>
+        <div class="text-center deposit-method-slider owl-theme owl-carousel">
 
           {section name=p loop=$ps}
             {if $ps[p].balance > 0 and $ps[p].status == 1}
@@ -207,98 +208,36 @@
                   >
                 </div>
               </a>
-            {elseif $ps[p].status}
-              {if $smarty.section.p.first}
-                <div class="text-center deposit-method-slider owl-theme owl-carousel">
-                  <a
-                    href="#0"
-                    class="deposit-method-item"
-                  >
-                    <input
-                      type="checkbox"
-                      id="checkbox-{$ps[p].id}"
-                      name=type
-                      value="process_{$ps[p].id}"
-                      {if $smarty.section.p.index == 0}checked{/if}
-                      hidden
-                    >
-                    <label for="checkbox-{$ps[p].id}">{$ps[p].name} External</label>
-                    <div class="thumb">
-                      <div class="check">
-                        <img
-                          src="./assets/images/dashboard/payment/check.png"
-                          alt="payment"
-                        >
-                      </div>
-                      <img
-                        src="./assets/images/dashboard/payment/{$ps[p].id}.png"
-                        alt="payment"
-                      >
-                    </div>
-                  </a>
-
-              {elseif $smarty.section.p.last}
-
+              {elseif $ps[p].status}
                 <a
-                  href="#0"
-                  class="deposit-method-item"
+                href="#0"
+                class="deposit-method-item"
+              >
+                <input
+                  type="checkbox"
+                  id="checkbox-{$ps[p].id}"
+                  name=type
+                  value="process_{$ps[p].id}"
+                  {if $smarty.section.p.index == 0}checked{/if}
+                  hidden
                 >
-                  <input
-                    type="checkbox"
-                    id="checkbox-{$ps[p].id}"
-                    name=type
-                    value="process_{$ps[p].id}"
-                    {if $smarty.section.p.index == 0}checked{/if}
-                    hidden
-                  >
-                  <label for="checkbox-{$ps[p].id}">{$ps[p].name} External</label>
-                  <div class="thumb">
-                    <div class="check">
-                      <img
-                        src="./assets/images/dashboard/payment/check.png"
-                        alt="payment"
-                      >
-                    </div>
+                <label for="checkbox-{$ps[p].id}">{$ps[p].name} External</label>
+                <div class="thumb">
+                  <div class="check">
                     <img
-                      src="./assets/images/dashboard/payment/{$ps[p].id}.png"
+                      src="./assets/images/dashboard/payment/check.png"
                       alt="payment"
                     >
                   </div>
-                </a>
-              </div>
-              
-              {else}
-                <a
-                  href="#0"
-                  class="deposit-method-item"
-                >
-                  <input
-                    type="checkbox"
-                    id="checkbox-{$ps[p].id}"
-                    name=type
-                    value="process_{$ps[p].id}"
-                    {if $smarty.section.p.index == 0}checked{/if}
-                    hidden
+                  <img
+                    src="./assets/images/dashboard/payment/{$ps[p].id}.png"
+                    alt="payment"
                   >
-                  <label for="checkbox-{$ps[p].id}">{$ps[p].name} External</label>
-                  <div class="thumb">
-                    <div class="check">
-                      <img
-                        src="./assets/images/dashboard/payment/check.png"
-                        alt="payment"
-                      >
-                    </div>
-                    <img
-                      src="./assets/images/dashboard/payment/{$ps[p].id}.png"
-                      alt="payment"
-                    >
-                  </div>
-                </a>
-              {/if}
+                </div>
+              </a>
 
             {/if}
           {/section}
-
         </div>
 
       </div>
