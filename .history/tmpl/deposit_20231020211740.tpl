@@ -231,15 +231,11 @@
                     <img
                       src="./assets/images/dashboard/payment/check.png"
                       alt="payment"
-                      height="40px"
-                      width="40px"
                     >
                   </div>
                   <img
                     src="./assets/images/dashboard/payment/{$ps[p].id}.png"
                     alt="payment"
-                    height="180px"
-                    width="180px"
                   >
                 </div>
               </a>
