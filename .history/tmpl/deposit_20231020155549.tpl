@@ -151,7 +151,7 @@
                 class="deposit-method-item active"
               >
                 <input
-                  type=hidden
+                  type=radio
                   name=type
                   value="account_{$ps[p].id}"
                 >
