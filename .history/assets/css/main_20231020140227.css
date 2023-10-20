@@ -6742,7 +6742,7 @@ body *::-webkit-scrollbar-track {
 
 .deposit-wrapper .deposit-item {
     padding: 0 15px 60px;
-    width: calc(100% / 2);
+    width: calc(100% / 3);
 }
 
 @media (max-width: 991px) {
