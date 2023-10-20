@@ -163,7 +163,7 @@
                     >
                   </div>
                   <img
-                    src="./assets/images/dashboard/payment/01.png"
+                    src="./assets/images/dashboard/payment/{$ps[p].id}.png"
                     alt="payment"
                   >
                 </div>
@@ -193,7 +193,7 @@
                     >
                   </div>
                   <img
-                    src="./assets/images/dashboard/payment/01.png"
+                    src="./assets/images/dashboard/payment/{$ps[p].id}.png"
                     alt="payment"
                   >
                 </div>

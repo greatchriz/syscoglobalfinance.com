@@ -298,7 +298,6 @@
             </a>
         </div>
     </div>
-    
     <div class="deposit-system">
         <h4 class="main-subtitle">03. Enter the amount of Deposit:</h4>
         <form class="make-deposit">
