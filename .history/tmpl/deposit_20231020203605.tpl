@@ -183,7 +183,7 @@
           {section name=p loop=$ps}
             {if $ps[p].balance > 0 and $ps[p].status == 1}
               <a
-                href="#0"
+                href="#"
                 class="deposit-method-item"
               >
                 <input
