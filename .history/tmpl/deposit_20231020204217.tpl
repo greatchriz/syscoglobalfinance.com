@@ -178,7 +178,7 @@
       </tr> *}
 
       <div class="deposit-system">
-        <h4 class="main-subtitle">02. Choose balance System</h4>
+        <h4 class="main-subtitle">02. Choose Payment System</h4>
         <div class="text-center deposit-method-slider owl-theme owl-carousel">
 
           {section name=p loop=$ps}
