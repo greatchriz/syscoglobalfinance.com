@@ -297,9 +297,98 @@
           <button
             type="submit"
             class="custom-button border-0"
-          >Spend</button>
+          >Make Deposit</button>
         </div>
       </div>
+
+      <table
+        cellspacing=0
+        cellpadding=2
+        border=0
+      >
+
+        {* account balance *}
+        {* <tr>
+          <td>Your account balance ({$currency_sign}):</td>
+          <td align=right>{$currency_sign}{$ab_formated.total}</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td align=right>
+            <small>
+              {section name=p loop=$ps}
+                {if $ps[p].balance > 0}{$currency_sign}{$ps[p].balance} of {$ps[p].name}
+                  {if $hold[p].amount > 0} /
+                  {$currency_sign}{$hold[p].amount} on hold{/if}<br>
+                {/if}
+              {/section}
+            </small>
+          </td>
+        </tr> *}
+        {* account balance end *}
+
+        {* amount to spend *}
+        <tr>
+          <td>Amount to Spend ({$currency_sign}):</td>
+          <td align=right><input
+              type=text
+              name=amount
+              value='{$min_deposit}'
+              class=inpts
+              size=15
+              style="text-align:right;"
+            ></td>
+        </tr>
+        {* amount to spend end *}
+
+        {* payment method *}
+        {* <tr>
+          <td colspan=2>
+            <table
+              cellspacing=0
+              cellpadding=2
+              border=0
+            >
+              {section name=p loop=$ps}
+                {if $ps[p].balance > 0 and $ps[p].status == 1}
+                  <tr>
+                    <td><input
+                        type=radio
+                        name=type
+                        value="account_{$ps[p].id}"
+                      ></td>
+                    <td>Spend funds from the Account Balance {$ps[p].name}</td>
+                  </tr>
+                {/if}
+              {/section}
+              {section name=p loop=$ps}
+                {if $ps[p].status}
+                  <tr>
+                    <td><input
+                        type=radio
+                        name=type
+                        value="process_{$ps[p].id}"
+                        {if $smarty.section.p.index == 0}checked{/if}
+                      ></td>
+                    <td>Spend funds from {$ps[p].name}</td>
+                  </tr>
+                {/if}
+              {/section}
+            </table>
+          </td>
+        </tr> *}
+        {* payment method end *}
+
+        {* submit button *}
+        <tr>
+          <td colspan=2><input
+              type=submit
+              value="Spend"
+              class=sbmt
+            ></td>
+        </tr>
+        {* submit button end *}
+      </table>
 
     </form>
 
