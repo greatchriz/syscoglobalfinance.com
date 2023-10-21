@@ -206,17 +206,9 @@
                     >
                   </div>
                   <img
-                    src="./assets/images/dashboard/payment/{$ps[p].id}.svg"
+                    src="./assets/images/dashboard/payment/{$ps[p].id}.png"
                     alt="payment"
                   >
-                  <div class="cont">
-
-                    <span
-                      class="cl-1"
-                      style="font-size: 14px;font-weight:bold;color: #3b465e;"
-                    >BNB</span>
-                  </div>
-
                 </div>
               </a>
               {elseif $ps[p].status}
@@ -241,17 +233,9 @@
                     >
                   </div>
                   <img
-                    src="./assets/images/dashboard/payment/{$ps[p].id}.svg"
+                    src="./assets/images/dashboard/payment/{$ps[p].id}.png"
                     alt="payment"
                   >
-                  <div class="cont">
-
-                    <span
-                      class="cl-1"
-                      style="font-size: 14px;font-weight:bold;color: #3b465e;"
-                    >{$ps[p].name}</span>
-                  </div>
-
                 </div>
               </a>
 

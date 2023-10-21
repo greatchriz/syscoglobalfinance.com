@@ -177,8 +177,65 @@
 
       </tr> *}
 
-   
+      <div class="tab faq-tab">
+        <ul class="tab-menu">
+            <li>BASIC </li>
+            <li class="active">FINANCIAL</li>
+            <li>Affiliate</li>
+        </ul>
 
+        <div class="tab-area">
+            <div class="tab-item">
+                <div class="faq-wrapper">
+                    <div class="faq-item">
+                        <div class="faq-title">
+                            <h5 class="title">Basic</h5>
+                            <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                            <p>
+                                Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus, dicta optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione, molestiae magnam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-item active">
+              <div class="faq-wrapper">
+                <div class="faq-item">
+                  <div class="faq-title">
+                    <h5 class="title">Basic</h5>
+                    <span class="right-icon"></span>
+                  </div>
+                  <div class="faq-content">
+                    <p>
+                      Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus, dicta optio
+                      eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione, molestiae magnam.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-item">
+              <div class="faq-wrapper">
+                <div class="faq-item">
+                  <div class="faq-title">
+                    <h5 class="title">Basic</h5>
+                    <span class="right-icon"></span>
+                  </div>
+                  <div class="faq-content">
+                    <p>
+                      Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus, dicta optio
+                      eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione, molestiae magnam.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
 
       <div class="deposit-system">
         <h4 class="main-subtitle">02. Choose Payment System</h4>
@@ -206,17 +263,9 @@
                     >
                   </div>
                   <img
-                    src="./assets/images/dashboard/payment/{$ps[p].id}.svg"
+                    src="./assets/images/dashboard/payment/{$ps[p].id}.png"
                     alt="payment"
                   >
-                  <div class="cont">
-
-                    <span
-                      class="cl-1"
-                      style="font-size: 14px;font-weight:bold;color: #3b465e;"
-                    >BNB</span>
-                  </div>
-
                 </div>
               </a>
               {elseif $ps[p].status}
@@ -241,17 +290,9 @@
                     >
                   </div>
                   <img
-                    src="./assets/images/dashboard/payment/{$ps[p].id}.svg"
+                    src="./assets/images/dashboard/payment/{$ps[p].id}.png"
                     alt="payment"
                   >
-                  <div class="cont">
-
-                    <span
-                      class="cl-1"
-                      style="font-size: 14px;font-weight:bold;color: #3b465e;"
-                    >{$ps[p].name}</span>
-                  </div>
-
                 </div>
               </a>
 
