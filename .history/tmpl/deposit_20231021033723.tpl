@@ -198,17 +198,18 @@
                   hidden
                 >
 
-                <div class="thumb p-3">
+                <div class="thumb">
                   <div class="check">
                       <img src="./assets/images/dashboard/payment/check.png" alt="payment">
                   </div>
                   <img src="./assets/images/dashboard/payment/{$ps[p].id}.svg" alt="payment">
+                  <div class="cont" style="width: 80px; overflow: auto;">
 
                     <span
                       class="cl-1"
-                      style="font-size: 12px;font-weight:bold;color: #3b465e; display: inline-block; text-align: start; overflow: hidden; text-overflow: ellipsis; width: 80px;"
-                    >
-                    {$ps[p].name}</span>
+                      style="font-size: 14px;font-weight:bold;color: #3b465e;"
+                    >{$ps[p].name}</span>
+                  </div>
               </div>
 
               </a>
@@ -228,7 +229,7 @@
                   {if $smarty.section.p.index == 0}checked{/if}
                   hidden
                 >
-                <div class="thumb p-3">
+                <div class="thumb">
                   <div class="check">
                     <img
                       src="./assets/images/dashboard/payment/check.png"
@@ -239,11 +240,14 @@
                     src="./assets/images/dashboard/payment/{$ps[p].id}.svg"
                     alt="payment"
                   >
-                  <span
+                  <div class="cont" style="width: 80px; overflow: auto;">
+
+                    <span
+
                       class="cl-1"
-                      style="font-size: 12px;font-weight:bold;color: #3b465e; display: inline-block; text-align: start; overflow: hidden; text-overflow: ellipsis; width: 80px;"
-                    >
-                    {$ps[p].name}</span>
+                      style="font-size: 12px;font-weight:bold;color: #3b465e;"
+                    >{$ps[p].name}</span>
+                  </div>
 
                 </div>
               </a>
