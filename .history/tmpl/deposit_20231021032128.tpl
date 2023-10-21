@@ -197,12 +197,17 @@
                   value="account_{$ps[p].id}"
                   hidden
                 >
-
                 <div class="thumb">
                   <div class="check">
-                      <img src="./assets/images/dashboard/payment/check.png" alt="payment">
+                    <img
+                      src="./assets/images/dashboard/payment/check.png"
+                      alt="payment"
+                    >
                   </div>
-                  <img src="./assets/images/dashboard/payment/{$ps[p].id}.svg" alt="payment">
+                  <img
+                    src="./assets/images/dashboard/payment/{$ps[p].id}.svg"
+                    alt="payment"
+                  >
                   <div class="cont">
 
                     <span
@@ -210,8 +215,8 @@
                       style="font-size: 14px;font-weight:bold;color: #3b465e;"
                     >BNB</span>
                   </div>
-              </div>
 
+                </div>
               </a>
             {/if}
           {/section}
