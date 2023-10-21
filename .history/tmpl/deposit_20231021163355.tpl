@@ -251,14 +251,14 @@
           checkboxes.forEach(depositMethodItem => {
             depositMethodItem.addEventListener('click', () => {
               event.preventDefault();
-              const radio = depositMethodItem.querySelector('input[type="radio"]');
-              radio.checked = true;
+              const checkbox = depositMethodItem.querySelector('input[type="checkbox"]');
+              checkbox.checked = !checkbox.checked;
 
-              checkboxes.forEach(depositMethodItem => {
+              if (checkbox.checked) {
+                depositMethodItem.classList.add('active');
+              } else {
                 depositMethodItem.classList.remove('active');
-              });
-    
-              depositMethodItem.classList.add('active');
+              }
             });
           });
         </script>
