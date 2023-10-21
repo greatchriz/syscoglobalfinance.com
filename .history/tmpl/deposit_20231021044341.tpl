@@ -205,12 +205,12 @@
               {section name=p loop=$ps}
                 {if $ps[p].balance > 0 and $ps[p].status == 1}
                   <a
-                    href="#0"
-                    class="deposit-method-item p-3"
+                    href=""
+                    class="account-deposit-method-item p-3"
                   >
                     <input
                       type="checkbox"
-                      id="checkbox-{$ps[p].id}"
+                      id="account_{$ps[p].id}"
                       name=type
                       value="account_{$ps[p].id}"
                       hidden
@@ -248,12 +248,12 @@
 
               {section name=p loop=$ps}
                 {if $ps[p].status} <a
-                    href="#0"
-                    class="deposit-method-item p-3"
+                    href=""
+                    class="process-deposit-method-item p-3"
                   >
                     <input
                       type="checkbox"
-                      id="checkbox-{$ps[p].id}"
+                      id="process_{$ps[p].id}"
                       name=type
                       value="process_{$ps[p].id}"
                       hidden
