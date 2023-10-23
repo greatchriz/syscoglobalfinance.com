@@ -1,3 +1,4 @@
+{include file="header.tpl"}
 
 {literal}
 <script language=javascript>
