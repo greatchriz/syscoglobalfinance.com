@@ -246,64 +246,109 @@ Withdraw is not available for demo account.
                         >
                       </div>
                       <div class="cont">
-                        <span class="cl-1">{$currency_sign}{$p.available}</span>
-                        <span class="cl-4">Available</span>
+                        <span class="cl-1">0.00</span>
+                        <span class="cl-4">USD</span>
                       </div>
                     </li>
-
-                    {if $have_hold}
                     <li>
                       <div class="icon">
                         <img
-                          src="./assets/images/dashboard/earn/usd.png"
+                          src="./assets/images/dashboard/earn/btc.png"
                           alt="dashboard-earn"
                         >
                       </div>
                       <div class="cont">
-                        <span class="cl-1">{$currency_sign}{$p.hold}</span>
-                        <span class="cl-4">On Hold</span>
+                        <span class="cl-1">0.000000</span>
+                        <span class="cl-4">BTC</span>
                       </div>
                     </li>
-                    {/if}
-
                     <li>
                       <div class="icon">
                         <img
-                          src="./assets/images/dashboard/earn/usd.png"
+                          src="./assets/images/dashboard/earn/xrp.png"
                           alt="dashboard-earn"
                         >
                       </div>
                       <div class="cont">
-                        <span class="cl-1">{$currency_sign}{$p.pending}</span>
-                        <span class="cl-4">Pending</span>
+                        <span class="cl-1">0.000000</span>
+                        <span class="cl-4">XRP</span>
                       </div>
                     </li>
-
-                    {if $p.account != ''}
                     <li>
                       <div class="icon">
                         <img
-                          src="./assets/images/dashboard/earn/usd.png"
+                          src="./assets/images/dashboard/earn/eth.png"
                           alt="dashboard-earn"
                         >
                       </div>
                       <div class="cont">
-                        <span class="cl-1">{$p.account|escape:html}</span>
-                        <span class="cl-4">Wallet Address</span>
+                        <span class="cl-1">0.000000</span>
+                        <span class="cl-4">ETH</span>
                       </div>
                     </li>
-
-                    {else}
-                      <li>
-                        <a href="{"?a=edit_account"|encurl}" class="custom-button border-0">Add Wallet</button>
-                      </li>
-
-                    {/if}
                   </ul>
                 </div>
               </div>
             </div>
           {/foreach}
+
+          {* <table
+            cellspacing=0
+            cellpadding=2
+            border=0
+          >
+            <tr>
+              <th></th>
+              <th>Processing</th>
+              <th>Available</th>
+              {if $have_hold}
+                <th>On Hold</th>
+              {/if}
+              <th>Pending</th>
+              <th>Account</th>
+            </tr>
+            {foreach from=$ps item=p}
+              <tr>
+                <td>{if $p.available > 0}
+                    {if $p.status > 0 || $p.available > 0}<input
+                        type="radio"
+                        name="ec"
+                        value="{$p.id}"
+                        {if $frm.ec == $p.id}checked{/if}
+                    >{/if}
+                  {/if}
+                </td>
+                <td>
+                  <img
+                    src="images/{$p.id}.gif"
+                    width=44
+                    height=17
+                    align=absmiddle
+                  > {$p.name|escape:html}
+                </td>
+                <td>
+                  <b style="color:green">{$currency_sign}{$p.available}</b>
+                </td>
+                {if $have_hold}
+                  <td><b style="color:gray">{$currency_sign}{$p.hold}</b></td>
+                {/if}
+                <td>
+                  <b style="color:red">{$currency_sign}{$p.pending}</b>
+                </td>
+                <td>
+                  {if $p.account != ''}
+                    {$p.account|escape:html}
+
+                  {else}
+                    <a href="{"?a=edit_account"|encurl}"><i>not
+                      set</i></a>
+                  {/if}
+                </td>
+              </tr>
+
+            {/foreach}
+          </table> *}
+
 
         </div>
         {* available accounts and their balances and pending funds and their wallet addresses end *}
