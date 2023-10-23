@@ -1,9 +1,6 @@
 {include file="header.tpl"}
 
-<div class="deposit">
-  <h3 class="main-title">Withdraw Funds</h3>
-
- 
+<h3>Ask for withdrawal:</h3><br>
 
 {if $say eq 'processed'}
 {if $batch eq ''}Withdrawal request has been successfully saved.{else} Withdrawal has been processed. Batch id: {$batch}{/if}
@@ -194,7 +191,6 @@ Withdraw is not available for demo account.
   <input type=hidden name=say value="">
 
 
-
   {* total account balance and pending withdrawals *}
     <table cellspacing=0 cellpadding=2 border=0>
     <tr>
@@ -208,148 +204,140 @@ Withdraw is not available for demo account.
     </table>
   {* total account balance and pending withdrawals end *}
 
-  <!-- Choose Payment  System -->
-    <div class="deposit-system pt-0">
-      <h4 class="main-subtitle">01. Choose Withdrawal Wallet</h4>
-        {* available accounts and their balances and pending funds and their wallet addresses each with radio button if there is funds in it*}
-        <div class="row pb-30">
-          {foreach from=$ps item=p}
-            <div class="col-xl-6">
-              <div class="earn-item mb-30">
-                <div class="earn-thumb">
+  {* available accounts and their balances and pending funds and their wallet addresses each with radio button if there is funds in it*}
+  <div class="row pb-30">
+    {foreach from=$ps item=p}
+      <div class="col-xl-6">
+        <div class="earn-item mb-30">
+          <div class="earn-thumb">
+            <img
+              src="./assets/images/dashboard/earn/01.png"
+              alt="dashboard-earn"
+            >
+          </div>
+          <div class="earn-content">
+            <div class="check_box_group w-100 padding-bottom">
+              <input type="checkbox" name="notify" id="notify_1">
+              <label for="notify_1">
+                <h6 class="">Active deposits in the amount of</h6>
+              </label>
+            </div>
+           
+            <ul class="mb--5">
+              <li>
+                <div class="icon">
                   <img
-                    src="./assets/images/dashboard/payment/{$p.id}.svg"
+                    src="./assets/images/dashboard/earn/usd.png"
                     alt="dashboard-earn"
                   >
                 </div>
-                <div class="earn-content">
-
-                  {if $p.available > 0}
-                    {if $p.status > 0 || $p.available > 0}
-                      <div class="check_box_group pb-2 ml-4">
-                        <input type="radio" name="ec" id="1" value="{$p.id}" {if $frm.ec == $p.id}checked{/if}>
-                        <label for="1"><b>{$p.name|escape:html}</b></label>
-                      </div>
-                    {/if}
-                  {/if}
-              
-                
-                  <ul class="mb--5">
-                    <li>
-                      <div class="icon">
-                        <img
-                          src="./assets/images/dashboard/earn/usd.png"
-                          alt="dashboard-earn"
-                        >
-                      </div>
-                      <div class="cont">
-                        <span class="cl-1">0.00</span>
-                        <span class="cl-4">USD</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon">
-                        <img
-                          src="./assets/images/dashboard/earn/btc.png"
-                          alt="dashboard-earn"
-                        >
-                      </div>
-                      <div class="cont">
-                        <span class="cl-1">0.000000</span>
-                        <span class="cl-4">BTC</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon">
-                        <img
-                          src="./assets/images/dashboard/earn/xrp.png"
-                          alt="dashboard-earn"
-                        >
-                      </div>
-                      <div class="cont">
-                        <span class="cl-1">0.000000</span>
-                        <span class="cl-4">XRP</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="icon">
-                        <img
-                          src="./assets/images/dashboard/earn/eth.png"
-                          alt="dashboard-earn"
-                        >
-                      </div>
-                      <div class="cont">
-                        <span class="cl-1">0.000000</span>
-                        <span class="cl-4">ETH</span>
-                      </div>
-                    </li>
-                  </ul>
+                <div class="cont">
+                  <span class="cl-1">0.00</span>
+                  <span class="cl-4">USD</span>
                 </div>
-              </div>
-            </div>
-          {/foreach}
-
-          {* <table
-            cellspacing=0
-            cellpadding=2
-            border=0
-          >
-            <tr>
-              <th></th>
-              <th>Processing</th>
-              <th>Available</th>
-              {if $have_hold}
-                <th>On Hold</th>
-              {/if}
-              <th>Pending</th>
-              <th>Account</th>
-            </tr>
-            {foreach from=$ps item=p}
-              <tr>
-                <td>{if $p.available > 0}
-                    {if $p.status > 0 || $p.available > 0}<input
-                        type="radio"
-                        name="ec"
-                        value="{$p.id}"
-                        {if $frm.ec == $p.id}checked{/if}
-                    >{/if}
-                  {/if}
-                </td>
-                <td>
+              </li>
+              <li>
+                <div class="icon">
                   <img
-                    src="images/{$p.id}.gif"
-                    width=44
-                    height=17
-                    align=absmiddle
-                  > {$p.name|escape:html}
-                </td>
-                <td>
-                  <b style="color:green">{$currency_sign}{$p.available}</b>
-                </td>
-                {if $have_hold}
-                  <td><b style="color:gray">{$currency_sign}{$p.hold}</b></td>
-                {/if}
-                <td>
-                  <b style="color:red">{$currency_sign}{$p.pending}</b>
-                </td>
-                <td>
-                  {if $p.account != ''}
-                    {$p.account|escape:html}
-
-                  {else}
-                    <a href="{"?a=edit_account"|encurl}"><i>not
-                      set</i></a>
-                  {/if}
-                </td>
-              </tr>
-
-            {/foreach}
-          </table> *}
-
-
+                    src="./assets/images/dashboard/earn/btc.png"
+                    alt="dashboard-earn"
+                  >
+                </div>
+                <div class="cont">
+                  <span class="cl-1">0.000000</span>
+                  <span class="cl-4">BTC</span>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <img
+                    src="./assets/images/dashboard/earn/xrp.png"
+                    alt="dashboard-earn"
+                  >
+                </div>
+                <div class="cont">
+                  <span class="cl-1">0.000000</span>
+                  <span class="cl-4">XRP</span>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <img
+                    src="./assets/images/dashboard/earn/eth.png"
+                    alt="dashboard-earn"
+                  >
+                </div>
+                <div class="cont">
+                  <span class="cl-1">0.000000</span>
+                  <span class="cl-4">ETH</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        {* available accounts and their balances and pending funds and their wallet addresses end *}
-    </div>
+      </div>
+    {/foreach}
+
+    <table
+      cellspacing=0
+      cellpadding=2
+      border=0
+    >
+      <tr>
+        <th></th>
+        <th>Processing</th>
+        <th>Available</th>
+        {if $have_hold}
+          <th>On Hold</th>
+        {/if}
+        <th>Pending</th>
+        <th>Account</th>
+      </tr>
+      {foreach from=$ps item=p}
+        <tr>
+          <td>{if $p.available > 0}
+              {if $p.status > 0 || $p.available > 0}<input
+                  type="radio"
+                  name="ec"
+                  value="{$p.id}"
+                  {if $frm.ec == $p.id}checked{/if}
+              >{/if}
+            {/if}
+          </td>
+          <td>
+            <img
+              src="images/{$p.id}.gif"
+              width=44
+              height=17
+              align=absmiddle
+            > {$p.name|escape:html}
+          </td>
+          <td>
+            <b style="color:green">{$currency_sign}{$p.available}</b>
+          </td>
+          {if $have_hold}
+            <td><b style="color:gray">{$currency_sign}{$p.hold}</b></td>
+          {/if}
+          <td>
+            <b style="color:red">{$currency_sign}{$p.pending}</b>
+          </td>
+          <td>
+            {if $p.account != ''}
+              {$p.account|escape:html}
+
+            {else}
+              <a href="{"?a=edit_account"|encurl}"><i>not
+                set</i></a>
+            {/if}
+          </td>
+        </tr>
+
+      {/foreach}
+    </table>
+
+
+  </div>
+  {* available accounts and their balances and pending funds and their wallet addresses end *}
 
   {* amoount to withdraw and comment form *}
   {if $have_available}
@@ -378,5 +366,4 @@ Withdraw is not available for demo account.
 {/if}
 
 {/if}
-</div>
 {include file="footer.tpl"}
