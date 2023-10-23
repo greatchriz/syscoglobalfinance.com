@@ -64,10 +64,10 @@ Withdraw is not available for demo account.
   {* preview withdrawal form *}
    <!-- Choose Payment  System -->
     <div class="deposit-system pt-0">
+      <h4 class="main-subtitle">Confirm Withdrawal</h4>
       <div class="row pb-30">
         <div class="col-12">
           <div class="earn-item mb-30">
-            <h6 class="title">Confirm Withdrawal</h6>
 
             <form method=post>
               <input
