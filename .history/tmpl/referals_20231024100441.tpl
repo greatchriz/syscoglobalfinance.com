@@ -129,59 +129,92 @@
 
       </tbody>
     </table>
+
+
+  <table
+    width=300
+    celspacing=1
+    cellpadding=1
+    border=0
+  >
+    <tr>
+      <td class=inheader>Date</td>
+      <td class=inheader>Ins</td>
+      <td class=inheader>Signups</td>
+    </tr>
+    {if $show_refstat}
+      {section name=s loop=$refstat}
+        <tr>
+          <td
+            class=item
+            align=center
+          ><b>{$refstat[s].date}</b></td>
+          <td
+            class=item
+            align=right
+          >{$refstat[s].income}</td>
+          <td
+            class=item
+            align=right
+          >{$refstat[s].reg}</td>
+        </tr>
+      {/section}
+    {else}
+      <tr>
+        <td
+          class=item
+          align=center
+          colspan=3
+        >No statistics found for this period.</td>
+      </tr>
+    {/if}
+  </table><br>
 {/if}
+
 
 {if $settings.show_referals}
-  {if $show_referals}
-    <h3>Your referrals:</h3>
-    <table class="transaction-table">
-
-      <tr>
-        <th>Nickname</th>
-        <th>E-mail</th>
-        <th>Status</th>
-      </tr>
-      {section name=s loop=$referals}
-        <tr>
-          <td ><b>{$referals[s].username}</b></td>
-          <td ><a href=mailto:{$referals[s].email}>{$referals[s].email}</a></td>
-          <td >{if $referals[s].q_deposits > 0}Deposited{else}No deposit yet{/if}</td>
-        </tr>
-        {if $referals[s].ref_stats}
-          <tr>
-            <td >
-              User referrals:
-              {section name=l loop=$referals[s].ref_stats}
-                <nobr>{$referals[s].ref_stats[l].cnt_active} active of {$referals[s].ref_stats[l].cnt} on level
-                  {$referals[s].ref_stats[l].level}{if !$smarty.section.l.last};{/if}</nobr>
-              {/section}
-            </td>
-          </tr>
-        {/if}
-        {if $referals[s].came_from}
-          <tr>
-            <td >
-              <a
-                href="{$referals[s].came_from}"
-                target=_blank
-              >[User came from]</a>
-            </td>
-          </tr>
-        {/if}
-      {/section}
-      <tr>
-        <td >&nbsp;</td>
-      </tr>
-      <tr>
-        <td ><b>2-10 level referrals:</b> {$cnt_other}</td>
-      </tr>
-      <tr>
-        <td ><b>2-10 level active referrals:</b> {$cnt_other_active}</td>
-      </tr>
-    </table>
-  {/if}
+{if $show_referals}
+<h3>Your referrals:</h3>
+<table cellspacing=1 cellpadding=1 border=0>
+<tr>
+ <td class=inheader>Nickname</td>
+ <td class=inheader>E-mail</td>
+ <td class=inheader>Status</td>
+</tr>
+{section name=s loop=$referals}
+<tr>
+ <td class=item><b>{$referals[s].username}</b></td>
+ <td class=item><a href=mailto:{$referals[s].email}>{$referals[s].email}</a></td>
+ <td class=item>{if $referals[s].q_deposits > 0}Deposited{else}No deposit yet{/if}</td>
+</tr>
+{if $referals[s].ref_stats}
+<tr>
+ <td colspan=3>
+  User referrals:
+  {section name=l loop=$referals[s].ref_stats}
+   <nobr>{$referals[s].ref_stats[l].cnt_active} active of {$referals[s].ref_stats[l].cnt} on level {$referals[s].ref_stats[l].level}{if !$smarty.section.l.last};{/if}</nobr>
+  {/section}
+ </td>
+</tr>
 {/if}
-
+{if $referals[s].came_from}
+<tr><td colspan=3>
+<a href="{$referals[s].came_from}" target=_blank>[User came from]</a>
+</td></tr>
+{/if}
+{/section}
+<tr>
+ <td colspan=3>&nbsp;</td>
+</tr>
+<tr>
+ <td colspan=3><b>2-10 level referrals:</b> {$cnt_other}</td>
+</tr>
+<tr>
+ <td colspan=3><b>2-10 level active referrals:</b> {$cnt_other_active}</td>
+</tr>
+</table>
+{/if}
+{/if}
 
 
 {include file="footer.tpl"}
