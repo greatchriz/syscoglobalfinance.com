@@ -90,9 +90,18 @@
                                         </li>
 
                                         <li>
-                                            <a href="#0"><i class="flaticon-globe"></i>Enterprise House, Eureka Business Park, Ashford, Kent, England,&nbsp;TN25&nbsp;4AG </a>
+                                            <a href="#0">Enterprise House, Eureka Business Park, Ashford, Kent, England,&nbsp;TN25&nbsp;4AG </a>
                                         </li>
-                                  
+                                        <li>
+                                            <i class="flaticon-globe"></i>
+                                            <div class="select-area">
+                                                <select class="select-bar" style="display: none;">
+                                                    <option value="en">English</option>
+                                                    <option value="bn">Bangla</option>
+                                                    <option value="sp">Spanish</option>
+                                                </select>
+                                            </div>
+                                        </li>
                                     </ul>
                                     <div class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
                                    
