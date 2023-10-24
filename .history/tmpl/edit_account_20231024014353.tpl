@@ -211,10 +211,6 @@
                 {/if}
 
                 {include file="edit_account_input.tpl" label="Account Name:" userinfo=$userinfo.username disabled}
-
-                {include file="edit_account_input.tpl" label="Registration date:" userinfo=$userinfo.date_register disabled}
-
-                {include file="edit_account_input.tpl" label="Full Name:" userinfo=$userinfo.name }
 {* 
                 <table
                   cellspacing=0
