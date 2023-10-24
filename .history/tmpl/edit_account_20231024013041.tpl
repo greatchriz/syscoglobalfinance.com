@@ -3,7 +3,7 @@
   <h3 class="main-title">Your account</h3>
   <div class="row mb-30-none">
     <div class="col-12 mb-30">
-      <div class="create_wrapper mw-100">
+      <div class="create_wrapper">
 
               {literal}
                 <script language=javascript>
@@ -209,9 +209,6 @@
                     {/section}
                 </ul>
                 {/if}
-
-                {include file="edit_account_input.tpl" label="Account Name:" userinfo=$userinfo.username}
-{* 
                 <table
                   cellspacing=0
                   cellpadding=2
@@ -456,7 +453,7 @@
                         class=sbmt
                       ></td>
                   </tr>
-                </table> *}
+                </table>
               </form>
       </div>
     </div>  
