@@ -122,7 +122,6 @@
                 method=post
                 onsubmit="return checkform()"
                 name=editform
-                class="create_ticket_form row mb-30-none"
               >
                 <input
                   type=hidden
