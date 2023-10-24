@@ -170,7 +170,7 @@
                                     </li>
                                     <li class="pr-0">
                                         <a
-                                            href="{"?a=login"|encurl}"
+                                            href="{"?a=account"|encurl}"
                                             class="custom-button"
                                         >Join Us</a>
                                     </li>
