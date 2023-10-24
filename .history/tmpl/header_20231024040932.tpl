@@ -59,7 +59,7 @@
                     </div>
                     <div class="site-header-container">
                         <div class="side-logo">
-                            <a href="{"?a=edit_account"|encurl}">
+                            <a href="{"?a=home"|encurl"}">
                                 <img src="./assets/images/logo/logo.png" alt="logo">
                             </a>
                         </div>

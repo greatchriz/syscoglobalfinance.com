@@ -59,7 +59,7 @@
                     </div>
                     <div class="site-header-container">
                         <div class="side-logo">
-                            <a href="{"?a=edit_account"|encurl}">
+                            <a href="dashboard.html">
                                 <img src="./assets/images/logo/logo.png" alt="logo">
                             </a>
                         </div>
@@ -72,7 +72,7 @@
                             <div class="container">
                                 <div class="mobile-header d-flex justify-content-between d-lg-none align-items-center">
                                     <div class="author">
-                                        <img src="./assets/images/dashboard/user.png" alt="dashboard">
+                                        <img src="./assets/images/dashboard/author.png" alt="dashboard">
                                     </div>
                                     <div class="cross-header-bar">
                                         <span></span>
@@ -83,10 +83,10 @@
                                 <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-between align-items-center">
                                     <ul class="support-area">
                                         <li>
-                                            <a href="{"?a=suport"|encurl}"><i class="flaticon-support"></i>Support</a>
+                                            <a href="#0"><i class="flaticon-support"></i>Support</a>
                                         </li>
                                         <li>
-                                            <a href="Mailto:support@syscoglobalfinance.com"><i class="flaticon-email"></i><span class="__cf_email__" data-cfemail="620b0c040d220a1b0b120e030c064c010d0f">support@syscoglobalfinance.com</span> </a>
+                                            <a href="Mailto:info@hyipland.com"><i class="flaticon-email"></i><span class="__cf_email__" data-cfemail="620b0c040d220a1b0b120e030c064c010d0f">[email&#160;protected]</span> </a>
                                         </li>
                                         <li>
                                             <i class="flaticon-globe"></i>
@@ -100,7 +100,10 @@
                                         </li>
                                     </ul>
                                     <div class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
-                                   
+                                        <form class="dashboard-header-search mr-sm-4">
+                                            <label for="search"><i class="flaticon-magnifying-glass"></i></label>
+                                            <input type="text" placeholder="Search...">
+                                        </form>
                                         <ul class="dashboard-right-menus">
                                             <li>
                                                 <a href="#0" class="author">
@@ -117,7 +120,7 @@
                                                 <div class="notification-area">
                                                     <div class="author-header">
                                                         <div class="thumb">
-                                                            <img src="./assets/images/dashboard/user.png" alt="dashboard">
+                                                            <img src="./assets/images/dashboard/author.png" alt="dashboard">
                                                         </div>
                                                         <h6 class="title">{$userinfo.username}</h6>
                                                         <a href="#mailto:{$userinfo.email}"><span class="__cf_email__">{$userinfo.email}</span></a>

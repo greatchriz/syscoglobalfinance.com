@@ -59,7 +59,7 @@
                     </div>
                     <div class="site-header-container">
                         <div class="side-logo">
-                            <a href="{"?a=edit_account"|encurl}">
+                            <a href="dashboard.html">
                                 <img src="./assets/images/logo/logo.png" alt="logo">
                             </a>
                         </div>
@@ -72,7 +72,7 @@
                             <div class="container">
                                 <div class="mobile-header d-flex justify-content-between d-lg-none align-items-center">
                                     <div class="author">
-                                        <img src="./assets/images/dashboard/user.png" alt="dashboard">
+                                        <img src="./assets/images/dashboard/author.png" alt="dashboard">
                                     </div>
                                     <div class="cross-header-bar">
                                         <span></span>
@@ -117,7 +117,7 @@
                                                 <div class="notification-area">
                                                     <div class="author-header">
                                                         <div class="thumb">
-                                                            <img src="./assets/images/dashboard/user.png" alt="dashboard">
+                                                            <img src="./assets/images/dashboard/author.png" alt="dashboard">
                                                         </div>
                                                         <h6 class="title">{$userinfo.username}</h6>
                                                         <a href="#mailto:{$userinfo.email}"><span class="__cf_email__">{$userinfo.email}</span></a>
