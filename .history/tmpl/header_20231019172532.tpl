@@ -12,7 +12,7 @@
             content="ie=edge"
         >
 
-        <title>Sysco Global Finance - HYIP Investment HTML Template</title>
+        <title>Sysco Global Finance -  Investment HTML Template</title>
 
         <link
             rel="stylesheet"

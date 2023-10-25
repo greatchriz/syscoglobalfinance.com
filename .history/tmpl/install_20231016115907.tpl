@@ -31,7 +31,7 @@
                                                                 <tr>
                                                                     <td width="100%" height="100%" valign="top">
                                                                         <center style="width:60%;margin:auto;">
-                                                                            <h3> Manager Pro. Install Script.</h3>
+                                                                            <h3>HYIP Manager Pro. Install Script.</h3>
 																			
 																			{if $wrong_license == 1}
                                                                             <div class="alert alert-danger"><b>Wrong license.</b><br><br>Please contact <a href="http://www.goldcoders.com">www.goldcoders.com</a> if you bought license to this host.</div>						 

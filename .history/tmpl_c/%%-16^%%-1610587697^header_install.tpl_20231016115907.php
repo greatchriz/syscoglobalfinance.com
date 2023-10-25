@@ -1,10 +1,12 @@
+<?php /* Smarty version 2.6.2, created on 2020-01-31 12:27:44
+         compiled from header_install.tpl */ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 
 <head>
-    <title> Manager Pro. Install Script.</title>
+    <title>HYIP Manager Pro. Install Script.</title>
     <link href="style.css" rel="stylesheet" type="text/css">
-	{literal}
+	<?php echo '
     <style>
         .pagination {
             display: -ms-flexbox;
@@ -476,6 +478,7 @@
             background-color: #FCE7CA;
         }
     </style>
-	{/literal}
+	'; ?>
+
 	
 </head>

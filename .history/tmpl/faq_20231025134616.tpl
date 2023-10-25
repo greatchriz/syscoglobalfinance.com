@@ -88,7 +88,7 @@
                             </div>
                             <div class="faq-content">
                                 <p>
-                                    To make a investment you must first become a member of syscoglobalfinance.com hyip. Once you are signed up, you can make your first deposit. All deposits must be made through the Members Area. You can login using the member username and password you receive when signup.
+                                    To make a investment you must first become a member of syscoglobalfinance.com . Once you are signed up, you can make your first deposit. All deposits must be made through the Members Area. You can login using the member username and password you receive when signup.
                                 </p>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                         
                         <div class="faq-item">
                             <div class="faq-title">
-                                <h5 class="title">How do I open my syscoglobalfinance.com HYIP Account?</h5>
+                                <h5 class="title">How do I open my syscoglobalfinance.com  Account?</h5>
                                 <span class="right-icon"></span>
                             </div>
                             <div class="faq-content">
