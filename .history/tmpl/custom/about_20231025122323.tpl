@@ -254,7 +254,7 @@
 
 
 <!--=======Investor-Section Starts Here=======-->
-{* <section class="investor-section padding-bottom padding-top pt-max-lg-0">
+<section class="investor-section padding-bottom padding-top pt-max-lg-0">
     <div
         class="ball-group-1 ball-group-4"
         data-paroller-factor="-0.30"
@@ -344,7 +344,7 @@
             </div>
         </div>
     </div>
-</section> *}
+</section>
 <!--=======Investor-Section Ends Here=======-->
 
 
@@ -381,7 +381,7 @@
 
 
 <!--=======Check-Section Starts Here=======-->
-{* <section class="client-section padding-bottom padding-top">
+<section class="client-section padding-bottom padding-top">
     <div class="background-map">
         <img
             src="./assets/images/client/client-bg.png"
@@ -505,7 +505,7 @@
             </div>
         </div>
     </div>
-</section> *}
+</section>
 <!--=======Check-Section Ends Here=======-->
     
 {include file="main_footer.tpl"}

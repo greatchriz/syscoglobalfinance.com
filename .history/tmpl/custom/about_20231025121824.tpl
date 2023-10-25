@@ -161,14 +161,13 @@
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-10">
                 <div class="section-header">
-                    <span class="cate">Our Investment Approach </span>
-                    
-                    <p class="mw-100 mb-30">
-                        Sysco Global Finance recognizes that some of the best opportunities lie in sectors and regions where capital is limited. Our investment strategy is straightforward: we leverage our team of investment professionals and partners across our operating businesses to identify and acquire high-quality assets at favorable valuations, financing them on a long-term, low-risk basis. Timing is pivotal to our success. Presently, our continental operations scale provides us with significant access to exclusive deals, while the size and liquidity of our balance sheet empower us to pursue profitable transactions.
-                    </p>
-
+                    <span class="cate">Our Mission to help our user</span>
+                    <h2 class="title">
+                        To maximize Money
+                    </h2>
                     <p class="mw-100">
-                        Sysco Global Finance recognizes that some of the best opportunities lie in sectors and regions where capital is limited. Our investment strategy is straightforward: we leverage our team of investment professionals and partners across our operating businesses to identify and acquire high-quality assets at favorable valuations, financing them on a long-term, low-risk basis. Timing is pivotal to our success. Presently, our continental operations scale provides us with significant access to exclusive deals, while the size and liquidity of our balance sheet empower us to pursue profitable transactions.
+                        We are worldwide investment company who are committed to the principle of revenue maximization
+                        and reduction of the financial risks at investing.
                     </p>
                 </div>
             </div>
@@ -254,7 +253,7 @@
 
 
 <!--=======Investor-Section Starts Here=======-->
-{* <section class="investor-section padding-bottom padding-top pt-max-lg-0">
+<section class="investor-section padding-bottom padding-top pt-max-lg-0">
     <div
         class="ball-group-1 ball-group-4"
         data-paroller-factor="-0.30"
@@ -344,7 +343,7 @@
             </div>
         </div>
     </div>
-</section> *}
+</section>
 <!--=======Investor-Section Ends Here=======-->
 
 
@@ -381,7 +380,7 @@
 
 
 <!--=======Check-Section Starts Here=======-->
-{* <section class="client-section padding-bottom padding-top">
+<section class="client-section padding-bottom padding-top">
     <div class="background-map">
         <img
             src="./assets/images/client/client-bg.png"
@@ -505,7 +504,7 @@
             </div>
         </div>
     </div>
-</section> *}
+</section>
 <!--=======Check-Section Ends Here=======-->
     
 {include file="main_footer.tpl"}
