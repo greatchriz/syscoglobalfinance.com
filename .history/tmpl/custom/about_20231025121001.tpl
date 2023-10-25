@@ -34,13 +34,12 @@
             </div>
             <div class="col-lg-6">
                 <div class="section-header left-style">
-                    <span class="cate">WELCOME TO Sysco Global Finance</span>
-                    <h2 class="title">about Sysco Global Finance</h2>
-                    <p class="mb-30">
-                        Sysco Global Finance is a leading provider of asset and financial management services, with over 3 years of experience and a proven track record of success. We are dedicated to delivering tailored solutions that meet the unique needs of our clients, helping them to achieve their financial goals and build a secure future.
-                    </p>
+                    <span class="cate"></span>
+                    <h2 class="title">Sysco Global: Empowering Financial Growth
+
+                    </h2>
                     <p>
-                        Our success is driven by our comprehensive strategies and disciplined risk management approach. We leverage our deep understanding of the global financial markets to identify and capitalize on opportunities, while minimizing risk. This has enabled us to consistently surpass global investment margins, yielding long-term returns for our clients, irrespective of market conditions.
+                        A brief history of asset and financial management excellence.
                     </p>
                 </div>
                 <div class="about--content">
@@ -52,9 +51,9 @@
                             >
                         </div>
                         <div class="about-content">
-                            <h5 class="title">Global Portfolio </h5>
+                            <h5 class="title">Secure & Reliable</h5>
                             <p>
-                                Our portfolio extends to a diverse international clientele.
+                                Secure assets fund for users
                             </p>
                         </div>
                     </div>
@@ -66,9 +65,9 @@
                             >
                         </div>
                         <div class="about-content">
-                            <h5 class="title">Extensive Range</h5>
+                            <h5 class="title">Fast Withdrawals</h5>
                             <p>
-                                Our professionals engage in a broad spectrum of regions, industries, and asset classes.
+                                Quick money withdrawals for users
                             </p>
                         </div>
                     </div>
@@ -80,23 +79,9 @@
                             >
                         </div>
                         <div class="about-content">
-                            <h5 class="title">Over $500 Million Funded</h5>
+                            <h5 class="title">Guaranteed</h5>
                             <p>
-                                We have provided funding exceeding half a billion dollars in commercial, business, and investment residential loans across a wide range of industries, from hospitality to construction and development.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="about-thumb">
-                            <img
-                                src="./assets/images/about/about03.png"
-                                alt="about"
-                            >
-                        </div>
-                        <div class="about-content">
-                            <h5 class="title">Emerging Industries</h5>
-                            <p>
-                                Sysco Global Finance is actively venturing into emerging industries, particularly the Energy and Currency sectors.
+                                Your return on investment is guaranteed
                             </p>
                         </div>
                     </div>
