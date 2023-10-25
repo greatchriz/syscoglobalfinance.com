@@ -4,7 +4,7 @@
 <html>
 
 <head>
-    <title> Manager Pro. Install Script.</title>
+    <title>HYIP Manager Pro. Install Script.</title>
     <link href="style.css" rel="stylesheet" type="text/css">
 	<?php echo '
     <style>

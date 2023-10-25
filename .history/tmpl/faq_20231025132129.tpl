@@ -295,7 +295,7 @@
 </section> *}
 
 <p align=justify> <b>How can I invest with {$site_name} ?</b><br>
-    To make a investment you must first become a member of {$site_name} . Once 
+    To make a investment you must first become a member of {$site_name} hyip. Once 
     you are signed up, you can make your first deposit. All deposits must be made 
     through the Members Area. You can login using the member username and password 
     you receive when signup. <br>
@@ -305,7 +305,7 @@
     You can open a free PM account here: <a href="http://www.perfectmoney.is/">www.perfectmoney.is</a><br>
     <br>
     <br>
-    <b>How do I open my {$site_name}  Account?</b><br>
+    <b>How do I open my {$site_name} HYIP Account?</b><br>
     It's quite easy and convenient. Follow this <a href="{"?a=signup"|encurl}">link</a>, fill 
     in the registration form and then press "Register". <br>
     <br>
@@ -347,16 +347,16 @@
     anytime. <br>
     <br>
     <b>How do you calculate the interest on my account?</b><br>
-    Depending on each plan. Interest on your {$site_name}  account is acquired 
+    Depending on each plan. Interest on your {$site_name} HYIP account is acquired 
     Daily, Weekly, Bi-Weekly, Monthly and Yearly and credited to your available 
     balance at the end of each day. <br>
     <br>
     <b>Can I do a direct deposit from my account balance?</b><br>
-    Yes! To make a deposit from your {$site_name}  account balance. Simply login 
+    Yes! To make a deposit from your {$site_name} HYIP account balance. Simply login 
     into your members account and click on Make Deposit ans select the Deposit from 
     Account Balance Radio button. <br>
     <br>
-    <b>Can I make an additional deposit to {$site_name}  account once it has 
+    <b>Can I make an additional deposit to {$site_name} HYIP account once it has 
     been opened?</b><br>
     Yes, you can but all transactions are handled separately. <br>
     <br>
@@ -386,13 +386,13 @@
     be frozen. <br>
     <br>
     <b>How can I make a spend?</b><br>
-    To make a spend you must first become a member of {$site_name} . Once you 
+    To make a spend you must first become a member of {$site_name} HYIP. Once you 
     are signed up, you can make your first spend. All spends must be made through 
     the Member Area. You can login using the member username and password you received 
     when signup. <br>
     <br>
     <b>Who manages the funds?</b><br>
-    These funds are managed by a team of {$site_name}  investment experts. <br>
+    These funds are managed by a team of {$site_name} HYIP investment experts. <br>
     <br>
   </p>
 <!--=======Feature-Section Ends Here=======-->
