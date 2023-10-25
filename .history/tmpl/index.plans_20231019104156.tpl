@@ -33,7 +33,7 @@
           <span class="cate">INVESTMENT OFFER</span>
           <h2 class="title">OUR INVESTMENT PLANS</h2>
           <p>
-            Hyipland provides a straightforward and transparent mechanism to attract investments and make more profits.
+            Sysco Global Finance provides a straightforward and transparent mechanism to attract investments and make more profits.
           </p>
         </div>
       </div>

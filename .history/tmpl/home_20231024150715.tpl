@@ -868,7 +868,7 @@
                                 </div>
                             </div>
                             <div class="affiliate-bottom">
-                                <h6 class="title">Make money with hyipland</h6>
+                                <h6 class="title">Make money with Sysco Global Finance</h6>
                                 <a href="#0" class="custom-button">
                                     learn more <i class="flaticon-right"></i>
                                 </a>
@@ -990,7 +990,7 @@
                                     <div class="client-item">
                                         <div class="client-content">
                                             <p>
-                                                Awesome hyipland most profitable site!
+                                                Awesome Sysco Global Finance most profitable site!
                                             </p>
                                             <div class="rating">
                                                 <span>

@@ -5,7 +5,7 @@
                     <div class="container">
                         <div class="newslater-area">
                             <div class="newslater-content padding-bottom padding-top">
-                                <span class="cate">SUBSCRIBE TO hyipland</span>
+                                <span class="cate">SUBSCRIBE TO Sysco Global Finance</span>
                                 <h3 class="title">To Get Exclusive Benefits</h3>
                                 <form class="newslater-form">
                                     <input type="text" placeholder="Enter Your Email Here" required>
@@ -40,7 +40,7 @@
                     <div class="footer-top">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="./assets/images/logo/footer-logo.png" alt="logo">
+                                <img src="./assets/images/logo/logo.svg" hieght="50px" width="180px" alt="logo">
                             </a>
                         </div>
                         <ul class="links">
@@ -64,7 +64,7 @@
                     <div class="footer-bottom">
                         <div class="footer-bottom-area">
                             <div class="left">
-                                <p>&copy; 2020 <a href="#0">Hyipland</a> | All right reserved</p>
+                                <p>&copy; 2020 <a href="#0">Sysco Global Finance</a> | All right reserved</p>
                             </div>
                             <ul class="social-icons">
                                 <li>

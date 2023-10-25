@@ -12,7 +12,7 @@
             content="ie=edge"
         >
 
-        <title>Hyipland - HYIP Investment HTML Template</title>
+        <title>Sysco Global Finance - HYIP Investment HTML Template</title>
 
         <link
             rel="stylesheet"
@@ -133,7 +133,7 @@
                                             <a href="#0"><i class="flaticon-support"></i>Support</a>
                                         </li>
                                         <li>
-                                            <a href="Mailto:info@hyipland.com"><i class="flaticon-email"></i><span
+                                            <a href="Mailto:info@Sysco Global Finance.com"><i class="flaticon-email"></i><span
                                                     class="__cf_email__"
                                                     data-cfemail="1a73747c755a7263736a767b747e34797577"
                                                 >[email&#160;protected]</span> </a>

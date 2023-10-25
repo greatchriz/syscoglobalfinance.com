@@ -41,6 +41,6 @@
             <div class="account-title text-center">
                 <a href="{"?a=home"|encurl}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span class="d-none d-sm-inline-block">To Home </span></span></a>
                 <a href="{"?a=home"|encurl}" class="logo">
-                    <img src="./assets/images/logo/footer-logo.png" alt="logo">
+                    <img src="./assets/images/logo/logo.svg" hieght="50px" width="180px" alt="logo">
                 </a>
             </div>

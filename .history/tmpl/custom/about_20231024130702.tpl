@@ -34,10 +34,10 @@
             </div>
             <div class="col-lg-6">
                 <div class="section-header left-style">
-                    <span class="cate">WELCOME TO HYIPLAND</span>
-                    <h2 class="title">about hyipland</h2>
+                    <span class="cate">WELCOME TO Sysco Global Finance</span>
+                    <h2 class="title">about Sysco Global Finance</h2>
                     <p>
-                        HYIPLAND is an investment company, whose team is working on making money from the volatility of
+                        Sysco Global Finance is an investment company, whose team is working on making money from the volatility of
                         cryptocurrencies and offer great returns to our clients.
                     </p>
                 </div>
@@ -104,7 +104,7 @@
                     <h3 class="title">Our goal is to be at the heart of the financial services industry</h3>
                     <div class="author">
                         <h6 class="subtitle"><a href="#0">Adam Phelps</a></h6>
-                        <span class="info">CEO of hyipland</span>
+                        <span class="info">CEO of Sysco Global Finance</span>
                         <div class="sign">
                             <img
                                 src="./assets/images/about/sign-ceo.png"
@@ -453,7 +453,7 @@
                         <div class="client-item">
                             <div class="client-content">
                                 <p>
-                                    Awesome hyipland most profitable site!
+                                    Awesome Sysco Global Finance most profitable site!
                                 </p>
                                 <div class="rating">
                                     <span>

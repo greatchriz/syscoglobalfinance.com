@@ -39,8 +39,8 @@
     <div class="account-section bg_img" data-background="./assets/images/account-bg.jpg">
         <div class="container">
             <div class="account-title text-center">
-                <a href="index.html" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span class="d-none d-sm-inline-block">To Hyipland</span></span></a>
+                <a href="index.html" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span class="d-none d-sm-inline-block">To Sysco Global Finance</span></span></a>
                 <a href="#0" class="logo">
-                    <img src="./assets/images/logo/footer-logo.png" alt="logo">
+                    <img src="./assets/images/logo/logo.svg" hieght="50px" width="180px" alt="logo">
                 </a>
             </div>

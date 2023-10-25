@@ -133,10 +133,10 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="section-header left-style">
-                                <span class="cate">WELCOME TO HYIPLAND</span>
-                                <h2 class="title">about hyipland</h2>
+                                <span class="cate">WELCOME TO Sysco Global Finance</span>
+                                <h2 class="title">about Sysco Global Finance</h2>
                                 <p>
-                                    HYIPLAND is an investment company, whose team is working on making money from the volatility of cryptocurrencies and offer great returns to our clients.
+                                    Sysco Global Finance is an investment company, whose team is working on making money from the volatility of cryptocurrencies and offer great returns to our clients.
                                 </p>
                             </div>
                             <div class="about--content">
@@ -374,7 +374,7 @@
                                 <span class="cate">INVESTMENT OFFER</span>
                                 <h2 class="title">OUR INVESTMENT PLANS</h2>
                                 <p>
-                                    Hyipland provides a straightforward and transparent mechanism to attract investments and make more profits.
+                                    Sysco Global Finance provides a straightforward and transparent mechanism to attract investments and make more profits.
                                 </p>
                             </div>
                         </div>
@@ -1142,7 +1142,7 @@
                                 </div>
                             </div>
                             <div class="affiliate-bottom">
-                                <h6 class="title">Make money with hyipland</h6>
+                                <h6 class="title">Make money with Sysco Global Finance</h6>
                                 <a href="#0" class="custom-button">
                                     learn more <i class="flaticon-right"></i>
                                 </a>
@@ -1264,7 +1264,7 @@
                                     <div class="client-item">
                                         <div class="client-content">
                                             <p>
-                                                Awesome hyipland most profitable site!
+                                                Awesome Sysco Global Finance most profitable site!
                                             </p>
                                             <div class="rating">
                                                 <span>

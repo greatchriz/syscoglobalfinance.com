@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-        <title>Hyipland - HYIP Investment HTML Template</title>
+        <title>Sysco Global Finance - HYIP Investment HTML Template</title>
     
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/all.min.css">
@@ -60,7 +60,7 @@
                                         <a href="#0"><i class="flaticon-support"></i>Support</a>
                                     </li>
                                     <li>
-                                        <a href="Mailto:info@hyipland.com"><i class="flaticon-email"></i><span class="__cf_email__" data-cfemail="86efe8e0e9c6eeffeff6eae7e8e2a8e5e9eb">[email&#160;protected]</span> </a>
+                                        <a href="Mailto:info@Sysco Global Finance.com"><i class="flaticon-email"></i><span class="__cf_email__" data-cfemail="86efe8e0e9c6eeffeff6eae7e8e2a8e5e9eb">[email&#160;protected]</span> </a>
                                     </li>
                                 </ul>
                             </div>

@@ -54,9 +54,9 @@
         <div class="row">
             <div class="col-xl-5 col-lg-6 offset-lg-6 offset-xl-7">
                 <div class="banner-content">
-                    <h1 class="title">Simply <span>Profitably </span> Conveniently</h1>
+                    <h1 class="title">Sysco  <span>Global  </span> Finance</h1>
                     <p>
-                        A Profitable platform for high-margin investment
+                        A Leader in Private Equity Financing and Consulting.
                     </p>
                     <div class="button-group">
                         <a href="sign-up.html" class="custom-button">Get Started Now!</a>
@@ -67,6 +67,63 @@
         </div>
     </div>
 </section>
+
+ <!--=======About-Section Starts Here=======-->
+    <section class="about-section padding-top padding-bottom" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 d-none d-lg-block rtl">
+                    <img src="./assets/images/about/about.png" alt="about">
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-header left-style">
+                        <span class="cate">Sysco Global Finance</span>
+                        <h2 class="title">About Us</h2>
+                        <p>
+                            Sysco Global Finance is a renowned firm in the global financial markets, specializing in private equity financing and consulting. With a track record spanning over three years, we have consistently delivered exceptional returns to our partners and clients.
+
+                        </p>
+                    </div>
+                    <div class="about--content">
+                        <div class="about-item">
+                            <div class="about-thumb">
+                                <img src="./assets/images/about/about01.png" alt="about">
+                            </div>
+                            <div class="about-content">
+                                <h5 class="title">Secure & Reliable</h5>
+                                <p>
+                                    Secure assets fund for users
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-item">
+                            <div class="about-thumb">
+                                <img src="./assets/images/about/about02.png" alt="about">
+                            </div>
+                            <div class="about-content">
+                                <h5 class="title">Fast Withdrawals</h5>
+                                <p>
+                                    Quick money withdrawals for users
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-item">
+                            <div class="about-thumb">
+                                <img src="./assets/images/about/about03.png" alt="about">
+                            </div>
+                            <div class="about-content">
+                                <h5 class="title">Guaranteed</h5>
+                                <p>
+                                    Your return on investment is guaranteed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=======About-Section Ends Here=======-->
 
 
 {include file="index.plans.tpl"}
@@ -124,61 +181,7 @@
             <!--=======Counter-Section Ends Here=======-->
     
     
-            <!--=======About-Section Starts Here=======-->
-            <section class="about-section padding-top padding-bottom" id="about">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 d-none d-lg-block rtl">
-                            <img src="./assets/images/about/about.png" alt="about">
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="section-header left-style">
-                                <span class="cate">WELCOME TO Sysco Global Finance</span>
-                                <h2 class="title">about Sysco Global Finance</h2>
-                                <p>
-                                    Sysco Global Finance is an investment company, whose team is working on making money from the volatility of cryptocurrencies and offer great returns to our clients.
-                                </p>
-                            </div>
-                            <div class="about--content">
-                                <div class="about-item">
-                                    <div class="about-thumb">
-                                        <img src="./assets/images/about/about01.png" alt="about">
-                                    </div>
-                                    <div class="about-content">
-                                        <h5 class="title">Secure & Reliable</h5>
-                                        <p>
-                                            Secure assets fund for users
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="about-item">
-                                    <div class="about-thumb">
-                                        <img src="./assets/images/about/about02.png" alt="about">
-                                    </div>
-                                    <div class="about-content">
-                                        <h5 class="title">Fast Withdrawals</h5>
-                                        <p>
-                                            Quick money withdrawals for users
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="about-item">
-                                    <div class="about-thumb">
-                                        <img src="./assets/images/about/about03.png" alt="about">
-                                    </div>
-                                    <div class="about-content">
-                                        <h5 class="title">Guaranteed</h5>
-                                        <p>
-                                            Your return on investment is guaranteed
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--=======About-Section Ends Here=======-->
+           
     
     
             <!--=======Feature-Section Starts Here=======-->
@@ -199,14 +202,19 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8 col-md-10">
                             <div class="section-header">
-                                <span class="cate">Our Amazing Features</span>
-                                <h2 class="title">
-                                    why should you invest
-                                </h2>
+                                <span class="cate">Our Mission</span>
+                                
                                 <p class="mw-100">
-                                    We are worldwide investment company who are committed to the principle of revenue  
-                                    maximization and reduction of the financial risks at investing.
+                                    At Sysco Global Finance, our mission is straightforward: to provide investors and clients with high returns on their investments. We are committed to creating value in the communities where we operate, all while making a positive impact on the global economy. We achieve this through our innovative and dedicated team, driven by a commitment to excellence, growth, and integrity. Our performance is marked by a history of superior risk-adjusted returns across a diverse range of asset classes, irrespective of economic conditions. We offer investment solutions tailored to meet nearly any need, focusing on risk mitigation and long-term value generation for our stakeholders.
+
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-10">
+                            <div class="section-header">
+                                <span class="cate">Industries We've Engaged With</span>
                             </div>
                         </div>
                     </div>
@@ -217,8 +225,8 @@
                                     <img src="./assets/images/feature/feature01.png" alt="feature">
                                 </div>
                                 <div class="feature-content">
-                                    <h5 class="title">Profitable Investment</h5>
-                                    <p>Donec tincidunt viverra ligula non interdum. Maecenas nulla </p>
+                                    <h5 class="title">Real Estatae</h5>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -228,8 +236,9 @@
                                     <img src="./assets/images/feature/feature02.png" alt="feature">
                                 </div>
                                 <div class="feature-content">
-                                    <h5 class="title">DDS Protection</h5>
-                                    <p>Donec tincidunt viverra ligula non interdum. Maecenas nulla </p>
+                                    <h5 class="title">New Construction
+                                    </h5>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -239,8 +248,41 @@
                                     <img src="./assets/images/feature/feature03.png" alt="feature">
                                 </div>
                                 <div class="feature-content">
-                                    <h5 class="title">24/7 Support Center</h5>
-                                    <p>Donec tincidunt viverra ligula non interdum. Maecenas nulla </p>
+                                    <h5 class="title">Hospitality</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-10 col-lg-4">
+                            <div class="feature-item">
+                                <div class="feature-thumb">
+                                    <img src="./assets/images/feature/feature01.png" alt="feature">
+                                </div>
+                                <div class="feature-content">
+                                    <h5 class="title">Health Care
+                                    </h5>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-10 col-lg-4">
+                            <div class="feature-item">
+                                <div class="feature-thumb">
+                                    <img src="./assets/images/feature/feature02.png" alt="feature">
+                                </div>
+                                <div class="feature-content">
+                                    <h5 class="title">Currency
+                                    </h5>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-10 col-lg-4">
+                            <div class="feature-item">
+                                <div class="feature-thumb">
+                                    <img src="./assets/images/feature/feature03.png" alt="feature">
+                                </div>
+                                <div class="feature-content">
+                                    <h5 class="title">Energy</h5>
                                 </div>
                             </div>
                         </div>
@@ -345,10 +387,10 @@
                         </div>
                         <div class="col-lg-5">
                             <div class="call-button">
-                                <a href="Tel:0939303" class="call">
+                                <a href="https://wa.me/message/IY2L2NROW3X6B1" class="call">
                                     <img src="./assets/images/call/icon02.png" alt="call">
                                 </a>
-                                <a href="#0" class="custom-button"> Contact Support</a>
+                                <a href="https://wa.me/message/IY2L2NROW3X6B1" class="custom-button"> Contact Support</a>
                             </div>
                         </div>
                     </div>
@@ -358,7 +400,7 @@
     
     
     
-            <!--=======Latest-Transaction-Section Starts Here=======-->
+            <!--=======Latest-Transaction-Section Starts Here=======--
             <section class="latest-transaction padding-top padding-bottom" id="transaction">
                 <div class="transaction-bg bg_img" data-background="./assets/images/transaction/transaction-bg.png">
                     <span class="d-none">Image</span>
@@ -781,7 +823,7 @@
                     </div>
                 </div>
             </section>
-            <!--=======Latest-Transaction-Section Ends Here=======-->
+            =======Latest-Transaction-Section Ends Here=======-->
     
     
             <!--=======Affiliate-Section Starts Here=======-->
@@ -866,7 +908,7 @@
             <!--=======Check-Section Ends Here=======-->
     
     
-            <!--=======Check-Section Starts Here=======-->
+            <!--=======Check-Section Starts Here=======--
             <section class="client-section padding-bottom padding-top">
                 <div class="background-map">
                     <img src="./assets/images/client/client-bg.png" alt="client">
@@ -980,7 +1022,7 @@
                     </div>
                 </div>
             </section>
-            <!--=======Check-Section Ends Here=======-->
+            =======Check-Section Ends Here=======-->
 
                 {/literal}
 
