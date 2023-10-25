@@ -73,11 +73,11 @@
             </div>
         </div>
         <div class="tab faq-tab">
-            {* <ul class="tab-menu">
+            <ul class="tab-menu">
                 <li>BASIC </li>
                 <li class="active">FINANCIAL</li>
                 <li>Affiliate</li>
-            </ul> *}
+            </ul>
             <div class="tab-area">
                 <div class="tab-item active">
                     <div class="faq-wrapper">
