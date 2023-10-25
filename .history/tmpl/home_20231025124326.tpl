@@ -59,8 +59,8 @@
                         A Leader in Private Equity Financing and Consulting.
                     </p>
                     <div class="button-group">
-                        <a href="{"?a=signup"|encurl}" class="custom-button">Get Started Now!</a>
-                        <a href="#0" class="popup video-button"><i class="flaticon-play"></i></a>
+                        <a href="sign-up.html" class="custom-button">Get Started Now!</a>
+                        <a href="https://www.youtube.com/watch?v=GT6-H4BRyqQ" class="popup video-button"><i class="flaticon-play"></i></a>
                     </div>
                 </div>
             </div>
