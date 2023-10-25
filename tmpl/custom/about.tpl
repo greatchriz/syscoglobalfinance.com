@@ -34,9 +34,8 @@
             </div>
             <div class="col-lg-6">
                 <div class="section-header left-style">
-                    <span class="cate">Sysco Global: Empowering Financial Growth
+                    <span class="cate">A brief history of asset and financial management excellence.
                     </span>
-                    <h2 class="title"> A brief history of asset and financial management excellence.</h2>
                     <p class="mb-30">
                         Sysco Global Finance is a leading provider of asset and financial management services, with over 3 years of experience and a proven track record of success. We are dedicated to delivering tailored solutions that meet the unique needs of our clients, helping them to achieve their financial goals and build a secure future.
                     </p>
@@ -159,7 +158,7 @@
     </div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-10">
+            <div class="col-12">
                 <div class="section-header">
                     <span class="cate">Our Investment Approach </span>
                     
@@ -185,6 +184,7 @@
             </div>
             <div class="col-lg-7">
                 <div class="mission-wrapper owl-theme owl-carousel">
+
                     <div class="mission-item">
                         <div class="mission-thumb">
                             <img
@@ -193,10 +193,9 @@
                             >
                         </div>
                         <div class="mission-content">
-                            <h5 class="title">Low invest</h5>
-                            <p>
-                                Praesent sagittis nibh vehicula diam tesque
-                            </p>
+                            <h5 class="title">AI-Powered Precision</h5>
+                            <p>Our AI algorithms analyze market trends, news, and data at lightning speed, enabling us
+                                to make data-driven decisions that maximize your returns and minimize risks.</p>
                             <a href="#0">Learn More <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
@@ -208,10 +207,10 @@
                             >
                         </div>
                         <div class="mission-content">
-                            <h5 class="title">One tap invest</h5>
-                            <p>
-                                Praesent sagittis nibh vehicula diam tesque
-                            </p>
+                            <h5 class="title">Expert Human Insight</h5>
+                            <p>Our team of financial experts collaborates with AI, combining their deep industry
+                                knowledge with technological prowess to craft strategies that are both innovative and
+                                grounded in wisdom.</p>
                             <a href="#0">Learn More <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
@@ -223,10 +222,9 @@
                             >
                         </div>
                         <div class="mission-content">
-                            <h5 class="title">Max. returns</h5>
-                            <p>
-                                Praesent sagittis nibh vehicula diam tesque
-                            </p>
+                            <h5 class="title">Proven Track Record</h5>
+                            <p>Our track record speaks for itself. Our strategies have consistently outperformed the
+                                market, showcasing our ability to adapt and succeed in various market conditions.</p>
                             <a href="#0">Learn More <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
@@ -238,13 +236,13 @@
                             >
                         </div>
                         <div class="mission-content">
-                            <h5 class="title">Transparency</h5>
-                            <p>
-                                Praesent sagittis nibh vehicula diam tesque
-                            </p>
+                            <h5 class="title">Tailored Approach</h5>
+                            <p>We understand that every investor's goals are unique. Our personalized approach ensures
+                                that your investment strategy aligns with your risk tolerance and objectives.</p>
                             <a href="#0">Learn More <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
