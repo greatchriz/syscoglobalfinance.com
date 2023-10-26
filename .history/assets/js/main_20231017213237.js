@@ -205,12 +205,12 @@
       }
     })
     $('.deposit-method-slider').owlCarousel({
-      loop: false,
+      loop: true,
       margin: 0,
       responsiveClass: true,
       nav: false,
       dots: false,
-      loop: false,
+      loop: true,
       autoplay: true,
       autoplayTimeout: 2000,
       autoplayHoverPause: true,
