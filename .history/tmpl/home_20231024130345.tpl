@@ -858,7 +858,7 @@
                             </div>
                         </div>
                         <div class="col-md-5 col-xl-6 text-center text-sm-left text-md-right">
-                            <a href="#0" class="custom-button">learn more <i class="flaticon-right"></i></a>
+                            <a href="?a=signup" class="custom-button">learn more <i class="flaticon-right"></i></a>
                         </div>
                     </div>
                 </div>
