@@ -168,7 +168,7 @@
                   <div class="dashboard-item">
                     
                       <div class="dashboard-inner">
-                        <div class="check_box_group w-100">
+                        <div class="check_box_group">
                           <input name="type" id="account_{$ps[p].id}" type="radio" value="account_{$ps[p].id}">
                           <label for="account_{$ps[p].id}">{$ps[p].name}</label>
                         </div>
@@ -203,8 +203,8 @@
                     
                       <div class="dashboard-inner">
                         <div class="check_box_group w-100">
-                          <input name="type" id="process_{$ps[p].id}" type="radio" value="process_{$ps[p].id}">
-                          <label for="process_{$ps[p].id}">{$ps[p].name}</label>
+                          <input name="type" id="account_{$ps[p].id}" type="radio" value="account_{$ps[p].id}">
+                          <label for="account_{$ps[p].id}">{$ps[p].name}</label>
                         </div>
                         
                           <div class="thumb">
